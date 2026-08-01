@@ -1,11 +1,17 @@
 ---
 title: Hermes Agent 官方文档
+id: source/hermes-agent文档
 type: source
+status: active
 tags: [hermes-agent, nous-research, agent, llm]
+aliases: []
 created: 2026-04-07
 updated: 2026-04-07
 sources: [hermes-agent官方文档]
 related: [hermes-agent核心定位, hermes-agent架构, hermes-agent安装配置, hermes-agent记忆系统, hermes-agent技能系统, hermes-agent工具系统]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Hermes Agent 官方文档

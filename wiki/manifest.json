@@ -1,0 +1,1423 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-01",
+  "root": "raw/sources",
+  "source_count": 164,
+  "sources": {
+    "raw/sources/LLM-wiki-阿里云/深度解析LLM_Wiki_Obsidian_Wiki_GBrain.md": {
+      "source_id": "source-92a41612ae7b",
+      "content_hash": "sha256:ad957a8999a574ff31250f1f732ce264295e7e8f0663f5f10f6d913998ede7d1",
+      "size_bytes": 59461,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/OpenAI_Agents_Python_SDK/OpenAI_Agents_Python_SDK_源码深度解析.md": {
+      "source_id": "source-de1a6bb1f900",
+      "content_hash": "sha256:a0c630dff877424ecf49849019cf522e0250be7fef09e6a5fbfda7123637b630",
+      "size_bytes": 41885,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/OpenAgents-Workspace-多Agent通信与记忆系统说明.md": {
+      "source_id": "source-909353875a05",
+      "content_hash": "sha256:7e0a8a8c282d6b149b872e7899139cd7b36a933bf178f9c5beaab868ad363ff0",
+      "size_bytes": 30845,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/PI-MONO/PI-Agent-设计说明.md": {
+      "source_id": "source-c5f719df4dba",
+      "content_hash": "sha256:22301a87e69017ac2a13be9d2806e14aaf24ea145b0d2accaa7a125642c85b88",
+      "size_bytes": 58989,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/PI-MONO/PI-MONO-项目完整技术文档.md": {
+      "source_id": "source-5d03c8b84a8e",
+      "content_hash": "sha256:37ba25f3057dcbd45a6e0e96be7c110766d7c59f50ca689bbd9dcdd681877944",
+      "size_bytes": 86915,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/README.md": {
+      "source_id": "source-b33563055168",
+      "content_hash": "sha256:da6e4eac6d2d5cc9aa5e464675f6c8e1827009cc91abae6b3440a793d8767fdd",
+      "size_bytes": 614,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "index/all-concepts",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/agentscope-java/harness-agent-deep-dive.md": {
+      "source_id": "source-e3349793cd58",
+      "content_hash": "sha256:360972bc3472c370d26dd9fb0dec3264f9116d6bca0832cd766efcf450030729",
+      "size_bytes": 46137,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/agentscope-java/感悟.md": {
+      "source_id": "source-8b61069241f7",
+      "content_hash": "sha256:637b0427a94ba4c96383fbc5eb804399030548506b874e3dbc804d6d44e0e7af",
+      "size_bytes": 6101,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/agentscope-java/问题.md": {
+      "source_id": "source-0b30fc2773d4",
+      "content_hash": "sha256:79b4fd2475b5548d2e156803befdd3940b0488a3a010c1c527f0598c2450ef62",
+      "size_bytes": 20029,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/assets/peter-steinberger-openclaw-loop-engineering-zh/file-20260615235111532.png": {
+      "source_id": "source-384f968b1e61",
+      "content_hash": "sha256:0a1dca7d403c0211bbf7f9cac103e1cb38b24b64f363f80372ef6d5a7fab3e38",
+      "size_bytes": 1123221,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/01-项目概览与核心定位.md": {
+      "source_id": "source-a2fe5746eb7a",
+      "content_hash": "sha256:c178cf006f8c717ec042e1e6af89dd20f9b98108fa4759d5fce49f6b851da818",
+      "size_bytes": 15906,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/02-环境配置与运行指南.md": {
+      "source_id": "source-61cea7fdb213",
+      "content_hash": "sha256:5339a358c6f8708fafb12c5266fb147006abeb8ad4f321e2367bf484bc5cc9a8",
+      "size_bytes": 18607,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/03-启动流程与入口点解析.md": {
+      "source_id": "source-6649cf826c23",
+      "content_hash": "sha256:a10b7ae1b484fa4ba54cdfcd98feabca630d64c0acb614387d611e9e09734cbf",
+      "size_bytes": 13423,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/04-核心架构总览.md": {
+      "source_id": "source-6e08a6f5fe8d",
+      "content_hash": "sha256:8cc350a24470a14100949bbb7ff536d332ecb990a702d6d31d71ab3d13053540",
+      "size_bytes": 19308,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "entity/claude-code/queryengine对话引擎"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/05-Agentic 对话循环机制.md": {
+      "source_id": "source-13e636212354",
+      "content_hash": "sha256:315bc45ddabcda76899ec7a754dfd2255af1f57f3073437707591aff804dbeb6",
+      "size_bytes": 20839,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/06-流式响应与事件处理.md": {
+      "source_id": "source-7ffe0a21370d",
+      "content_hash": "sha256:19a39f27875923b14226db68f8f9c0cfaab642630779e04c897b723af2611987",
+      "size_bytes": 34415,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/claude-code/流式响应与事件处理"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/07-多轮对话与会话管理.md": {
+      "source_id": "source-204cacb96c0b",
+      "content_hash": "sha256:a2812b3207e6466cf0f1390a35a14535563d5e4a69fda0aca422daace0d635c2",
+      "size_bytes": 17482,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/08-工具架构与注册机制.md": {
+      "source_id": "source-d926cc14fc69",
+      "content_hash": "sha256:4aae46def8f33715f7e1e3ab914bf5aaa61ce67cb7abf16c9df9ab72abe8e7dd",
+      "size_bytes": 18371,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/claude-code/工具架构与注册机制"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/09-文件操作工具详解.md": {
+      "source_id": "source-5e74c3d39679",
+      "content_hash": "sha256:9bb21bff63a4c02845098acd792743114b77784977dd76d287a067d96ded8350",
+      "size_bytes": 25910,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/10-Shell执行与命令工具.md": {
+      "source_id": "source-e4ecef7e2ef5",
+      "content_hash": "sha256:e4ef4bf4d986bfe36f87641508781f833063ee4443a57e00efeb10c9643a0b3c",
+      "size_bytes": 18195,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/11-搜索与导航工具.md": {
+      "source_id": "source-a4bf810fbcc6",
+      "content_hash": "sha256:851afaeff1adf59a976c3536edde374f97cde61e0f3462db7905a9b05499c80d",
+      "size_bytes": 28186,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/12-任务管理工具.md": {
+      "source_id": "source-acae53f27f8d",
+      "content_hash": "sha256:1c277696242a23730c4e1adc2b11278d7f3e73dff1654d7d9a9afbe59ace3c8e",
+      "size_bytes": 13655,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/13-权限模型与审批流程.md": {
+      "source_id": "source-9fa3548d0b7e",
+      "content_hash": "sha256:a40c70db7132b5ad52c34571d56327815a78414b4dbe308d4adac9ff66a62037",
+      "size_bytes": 20743,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/claude-code/权限模型与审批流程"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/14-沙箱隔离机制.md": {
+      "source_id": "source-0551b9987a18",
+      "content_hash": "sha256:1a7097dd1dd94d9829456aa1b71cb513484057438a9dfe2353b1c98269cc8d3e",
+      "size_bytes": 15985,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/claude-code/沙箱隔离机制"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/15-Plan-Mode执行模式.md": {
+      "source_id": "source-3bcff3cb378c",
+      "content_hash": "sha256:dc309173f3fd1864eefbe413f6dc8bd01efeddd27b5f761766f9dbd0f9e63429",
+      "size_bytes": 18805,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/16-自动模式与安全策略.md": {
+      "source_id": "source-908f8bc2ae8b",
+      "content_hash": "sha256:37644753c632951fabae0662a94011e165d112c694e7a5a2c98f847491b97e11",
+      "size_bytes": 13722,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/17-系统提示构建.md": {
+      "source_id": "source-c77602dba640",
+      "content_hash": "sha256:f564ba3f8e97b7ae82b1a09fc50028f8b6ef90f7c3b7ae23613ef2bdb87c6fbd",
+      "size_bytes": 22597,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/18-项目内存与知识管理.md": {
+      "source_id": "source-66ff227b09fa",
+      "content_hash": "sha256:6747b27346d36a9ac40e8e1124f084309c0d5fe8a9489b6d805a5363100300c1",
+      "size_bytes": 22911,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/19-上下文压缩策略.md": {
+      "source_id": "source-97034e6ec45f",
+      "content_hash": "sha256:785687f8ee902b0d9e242f1591459a1f0694316b7da9d245ed0b02132c59f4f8",
+      "size_bytes": 59600,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/claude-code/上下文压缩策略"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/20-Token预算管理.md": {
+      "source_id": "source-99d6b2eca080",
+      "content_hash": "sha256:caa5dfc4768e2e6c01227f4f7dd78924109462080a130ea56320ea8621a8d249",
+      "size_bytes": 23198,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/21-Sub-Agent机制.md": {
+      "source_id": "source-a9be82b86798",
+      "content_hash": "sha256:1f9e79e6a3055a8a3e0ba840b599709b57b41e2b44be8138a72a69edbba1beaa",
+      "size_bytes": 26657,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "entity/claude-code/Sub-Agent机制"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/22-Worktree隔离环境.md": {
+      "source_id": "source-839da0664037",
+      "content_hash": "sha256:a6a7ab045e4f77d7cbd0384a41d26fe5dbad76d039a3f67336f1a0b37d13a714",
+      "size_bytes": 22024,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/23-协调器与Swarm模式.md": {
+      "source_id": "source-af9687725918",
+      "content_hash": "sha256:ad305cd2d77893985d15e2340ff43ff7d4a39c2d40f6ddd10e131c14e3773bda",
+      "size_bytes": 23828,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/24-MCP协议集成.md": {
+      "source_id": "source-eb249170ff09",
+      "content_hash": "sha256:9f60ccbfe979d7bc362acf7eb6464a1e4f535b3fd5b037eb5fb079f712cce478",
+      "size_bytes": 18811,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/25-Hooks钩子系统.md": {
+      "source_id": "source-9e659664ec33",
+      "content_hash": "sha256:b38dc9c093fbb30cd83f0eb533430f7aee83ba4283be5ab28113194a7cd171ca",
+      "size_bytes": 29387,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/26-Skills技能扩展.md": {
+      "source_id": "source-41b5b804b734",
+      "content_hash": "sha256:89eb6079ac94866f86f3c728248fccd3a1e72447aaaeee47e40576244f90bebb",
+      "size_bytes": 18835,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "entity/claude-code/Skills技能扩展"
+      ]
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/27-自定义Agent开发.md": {
+      "source_id": "source-8084bcbb65a7",
+      "content_hash": "sha256:4e3562c894a47a26843a2c9a92c44ce625354596c20b4db2d8f1d80fe868d91d",
+      "size_bytes": 22678,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/README.md": {
+      "source_id": "source-e794141bbaf9",
+      "content_hash": "sha256:df308b3d39b7cd7b26d7807df89f39fc7ac179029ccbcc6269be71f8a8a53a5e",
+      "size_bytes": 3659,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/claude-code/学习感悟.md": {
+      "source_id": "source-c68566802ab4",
+      "content_hash": "sha256:eaf14eb8dc920b407c10c8e21a3f2041cd752ff5c8c974aaaa3202b0caa77c6a",
+      "size_bytes": 2712,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/clawteam/ClawTeam通用Agent协作设计思想精读.md": {
+      "source_id": "source-b6719e450ebe",
+      "content_hash": "sha256:daff564a9be8dc7e22612f7c1579aa9078c8923106b58ec1f1a72b149b653bc4",
+      "size_bytes": 31060,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/codex/Codex 实体查询表.md": {
+      "source_id": "source-db8d04c819b6",
+      "content_hash": "sha256:fedfb5c7ba8723ce21c75bc355c5084ef84b695ca2ac421edcc4792e185a7249",
+      "size_bytes": 12601,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/codex/codex-execution-chain-and-design.md": {
+      "source_id": "source-1617539c6ff1",
+      "content_hash": "sha256:cc93a3301f02a279329e25f8009fb8cb1d85386c3fc15c09afbde3f5a4ccfc50",
+      "size_bytes": 44721,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/codex/我与codex的对话问答.md": {
+      "source_id": "source-f7835c2ef932",
+      "content_hash": "sha256:ef96e6077888bd5e3f8a37e09e49288e7998db922e9667b42a68102b09f3ce3b",
+      "size_bytes": 83317,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/DeerFlow中的Harness-Engineering-实践详解.md": {
+      "source_id": "source-d4a82641e79b",
+      "content_hash": "sha256:046e4ca177a0b6630013001489de02b569f2a25745e0a14a1045b95f3333ccc1",
+      "size_bytes": 34101,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "entity/deer-flow/README"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/.github/workflows/deploy.yml": {
+      "source_id": "source-98e565a3b391",
+      "content_hash": "sha256:a702e8bba30fdceaf0d88937ae74b2a43e57da0cc664661297390591f1580633",
+      "size_bytes": 1053,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/.gitignore": {
+      "source_id": "source-4253ea2d338e",
+      "content_hash": "sha256:3e35162c566a66d02997cfcd62e2a9cd8d1f6e523946d49b69e5d3e456adfbfd",
+      "size_bytes": 74,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/.vitepress/config.ts": {
+      "source_id": "source-5a0884d8a37d",
+      "content_hash": "sha256:5ac46e52655d413bdb4ef494d2316d09c73a197bdf3040df068968e02f31ba3e",
+      "size_bytes": 5207,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/CNAME": {
+      "source_id": "source-546d250f5134",
+      "content_hash": "sha256:12fb8902a819d24afcb220222541c2e734175a114da981d33c2c8c88dccad7fa",
+      "size_bytes": 24,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/01-what-is-deerflow.md": {
+      "source_id": "source-67810db70885",
+      "content_hash": "sha256:d77dbf3f4dc2feccf64ce8c5b84260e760ee87c19c75fdfff75f72cc86c2a710",
+      "size_bytes": 7457,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/deerflow-book/长时程Agent",
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/02-repo-overview.md": {
+      "source_id": "source-e68c04dc3633",
+      "content_hash": "sha256:f2445089927b19f2b3990c09a0c118baa6e2af1b325552d5b92739bb8528ff3f",
+      "size_bytes": 8698,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/03-quick-start.md": {
+      "source_id": "source-b79e405bbacd",
+      "content_hash": "sha256:161124ee722fb583b8bd0b8ab721fe4cdffdc3aacb6489d23b306bd521ed36c9",
+      "size_bytes": 8756,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/04-langgraph-engine.md": {
+      "source_id": "source-fe6c3c3f22e6",
+      "content_hash": "sha256:ce67c3dd38f89d37084440a857b22af2fa1154880e2f59072abb436667ceddeb",
+      "size_bytes": 15304,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/05-lead-agent.md": {
+      "source_id": "source-8b9848742c5a",
+      "content_hash": "sha256:bce00149a2d81ccb839f8db9b6da94fa42023a1561d9f6ccf339a220db1e7dbf",
+      "size_bytes": 9939,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/06-middleware-pipeline.md": {
+      "source_id": "source-5710a1c56d4b",
+      "content_hash": "sha256:57eefe5c89c3f8062114b1d0c51399b391de6da433614b043a91b89ad66ae686",
+      "size_bytes": 37325,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/07-context-engineering.md": {
+      "source_id": "source-cdec66896e63",
+      "content_hash": "sha256:c28c33d4ded2a65f4b10deea0b9d92d4cf559afb1a0847b43773d95101aec01a",
+      "size_bytes": 12028,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/08-subagent-overview.md": {
+      "source_id": "source-a451443abdfa",
+      "content_hash": "sha256:55ff4f8390bbd3641a9fba16531a61cda9ddf1565e183a9fac91e9ceda981dae",
+      "size_bytes": 15351,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/09-subagent-executor.md": {
+      "source_id": "source-21b7c3fe1c60",
+      "content_hash": "sha256:71cde2443cb954521526ab4e3eabdd747137cdd62c5325054157daf171fbfcaf",
+      "size_bytes": 10104,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/10-orchestration.md": {
+      "source_id": "source-64dd6d866461",
+      "content_hash": "sha256:13a9c460ab298f4deadfca62a7599293848f13e9db6eb03f06f08a9a2bdfd02c",
+      "size_bytes": 12359,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/11-memory-architecture.md": {
+      "source_id": "source-bbd3effafcc1",
+      "content_hash": "sha256:39a5f4626c72b6507fa447380e8537275a11c088d40397413b0328afae753eb7",
+      "size_bytes": 16930,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/12-memory-pipeline.md": {
+      "source_id": "source-35584d8d1e5f",
+      "content_hash": "sha256:b177dd1b5f96d8881889501a1b620c909b78aaf887d252a157a2cefb223f1c38",
+      "size_bytes": 10302,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/13-sandbox-abstraction.md": {
+      "source_id": "source-ff01d821453e",
+      "content_hash": "sha256:628100101c5b4f78d5583f26a2f753aa76fd442492ae82efee653b11b265a545",
+      "size_bytes": 16380,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/14-sandbox-implementations.md": {
+      "source_id": "source-4792d0518597",
+      "content_hash": "sha256:7ea9c12af48bad7a02093a5bab138dbbf8105a9cb1f698e64434bd4cac10334e",
+      "size_bytes": 11053,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/15-builtin-tools.md": {
+      "source_id": "source-d1c2035928e2",
+      "content_hash": "sha256:da05b74f9d16ffa2b23e77e756bd7b7eeb85fe708722749caf54bcb04e061770",
+      "size_bytes": 9641,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/16-mcp-extensions.md": {
+      "source_id": "source-524cf94c14d8",
+      "content_hash": "sha256:93cae3c8b35fc683f75a45015c7461a00108d62ab88230f3c792fc062eb4bb38",
+      "size_bytes": 10436,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/17-skills-system.md": {
+      "source_id": "source-55717dbf5eca",
+      "content_hash": "sha256:b978782f49af9c2e431dba32fd4f048ee43719022f04fad7208b2fa165206fc6",
+      "size_bytes": 13254,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/18-custom-skills.md": {
+      "source_id": "source-ac368b1a8617",
+      "content_hash": "sha256:b71def193356a4e7b427ab8406f30c04c4b17422589037a8f7b95a302ab0c38e",
+      "size_bytes": 12775,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/19-fastapi-gateway.md": {
+      "source_id": "source-c452bf89e4e5",
+      "content_hash": "sha256:a1b0e3077a850ea8570755ac05f72056de356c6b7b4a9201e44f37d7ba7390c9",
+      "size_bytes": 10325,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/20-im-channels.md": {
+      "source_id": "source-2c4319507fe7",
+      "content_hash": "sha256:3ccdef0804cb7355c3c196f050bb7110ecd60d7e20ce041b0387d081b681d263",
+      "size_bytes": 13724,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/21-config-system.md": {
+      "source_id": "source-a719cabb45dd",
+      "content_hash": "sha256:6c07aa860496863aa6a0dfe15c9ab91bea70e9efce36d6bccc9604950d2b4bcf",
+      "size_bytes": 7353,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/22-model-config.md": {
+      "source_id": "source-febde6384de3",
+      "content_hash": "sha256:47457f03b61da5311e19ca0627deb2bee1a6ae3c53c4c314d5c8494c0c0aaf6c",
+      "size_bytes": 8363,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/23-deployment.md": {
+      "source_id": "source-670bf519b74e",
+      "content_hash": "sha256:667d0ff92b912b8dabaf8d465c0b4ba9592b1417cb077435e4ed38378dad2c97",
+      "size_bytes": 7582,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source",
+        "source/章节与源码路径映射"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-a-reading-path.md": {
+      "source_id": "source-2c90ec66be0f",
+      "content_hash": "sha256:b4fe82f54a897cfd8415a233a7e5bad973c6991a4564c107fcb04aa7230d8ca8",
+      "size_bytes": 1787,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-b-config-reference.md": {
+      "source_id": "source-504d65435ecf",
+      "content_hash": "sha256:5a3088059db901bdd0890a64034f2c6e715da0abbf2b25ef2385cf2d5c352864",
+      "size_bytes": 8094,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-c-glossary.md": {
+      "source_id": "source-5f990b966210",
+      "content_hash": "sha256:c355bf4fba487476699a359ff7777a48c93596534bff502130616873bec9ede0",
+      "size_bytes": 5058,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/deerflow-book-source"
+      ]
+    },
+    "raw/sources/deer-flow/deerflow-book-main/contents.md": {
+      "source_id": "source-e4043af71072",
+      "content_hash": "sha256:6676b18f526dceb3ab6e0b5140a673ab4493aaa76ed7b2f006b00ce5115a62ac",
+      "size_bytes": 2267,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/index.md": {
+      "source_id": "source-5ab40d613c03",
+      "content_hash": "sha256:4583d154e8865b1a2caed9d7a0f5c8de9e5a32ae9c51384ae29fa5b853f5fb64",
+      "size_bytes": 1440,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/package-lock.json": {
+      "source_id": "source-47a5bdfb58fc",
+      "content_hash": "sha256:3a9166b415c46b944a28ac1a9c3a3b9406e35356828dba0ce553923b8bec9c3b",
+      "size_bytes": 87860,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/package.json": {
+      "source_id": "source-a1e3db73ac24",
+      "content_hash": "sha256:71368f9e516ae2cf89ec0644d990b845f1d6a6950d770c4015f7ec7097fb6132",
+      "size_bytes": 679,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/CNAME": {
+      "source_id": "source-8eaeb0d08249",
+      "content_hash": "sha256:12fb8902a819d24afcb220222541c2e734175a114da981d33c2c8c88dccad7fa",
+      "size_bytes": 24,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/favicon.svg": {
+      "source_id": "source-b7185d4ab98b",
+      "content_hash": "sha256:163e26c5dcad32073a1d679b91d59e75dd029ae2a12db65d0a4bdd65b5698221",
+      "size_bytes": 774,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/icons/memory.svg": {
+      "source_id": "source-c4aa7ffa619a",
+      "content_hash": "sha256:5d37c1ba1a18eea09f111c96b9765fa526a39577151729c3586973df67528d93",
+      "size_bytes": 377,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/icons/sandbox.svg": {
+      "source_id": "source-89befd6e66fd",
+      "content_hash": "sha256:4db203573e3626a7906ef4af1a34dc45234c133a5309ab8fae54e081cd595fa0",
+      "size_bytes": 293,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/icons/skills.svg": {
+      "source_id": "source-b00d28f88ed8",
+      "content_hash": "sha256:30d0217f0288338fcd5a37c73d1e92321fb01846744285c132cb890cf2f51ac6",
+      "size_bytes": 258,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/icons/subagent.svg": {
+      "source_id": "source-8c2c36390b33",
+      "content_hash": "sha256:5e3a4480c90319e887aa5cca21afcc2ae0ccc230841180d27c95fbc9d613f53b",
+      "size_bytes": 333,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/logo.png": {
+      "source_id": "source-c2a963f8993b",
+      "content_hash": "sha256:0f5aaa6488a17556f093a2481ac1c5e4b0e3293623c64e924b7afe472400cb5e",
+      "size_bytes": 1492,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/deer-flow/deerflow-book-main/public/logo.svg": {
+      "source_id": "source-8063084eae93",
+      "content_hash": "sha256:576853ac00a927a69e1609f82b99de3f9ec7a3ac379eefd1e24d70f7cf507618",
+      "size_bytes": 1339,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/Agent Harness Engineering：A Survey.md": {
+      "source_id": "source-0506f8618f26",
+      "content_hash": "sha256:8bcc599d0a9a75cbc72f4594d85bce7077c6690a2ebbef88ea4e154bee374047",
+      "size_bytes": 191142,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/Agent-Harness工程化权威指南.md": {
+      "source_id": "source-064b3deb91ee",
+      "content_hash": "sha256:ec19ba96c5a4381092be070d2d0f3207719eab72ba0f7f84d61959652da5efa5",
+      "size_bytes": 57377,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/Harness_Engineering_完整课程.md": {
+      "source_id": "source-7b75699c5326",
+      "content_hash": "sha256:783e730ce9c24415bd39b74f19ec88b56677cb49a6602d91a78c5d0553a9e3bb",
+      "size_bytes": 146320,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/Harness六大组件深度解读.md": {
+      "source_id": "source-036d3ab644d0",
+      "content_hash": "sha256:e3531e121d37ffdeee63f41d3004bd74574888e9ff5838a0335d9adc6a6c1c55",
+      "size_bytes": 24936,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/harness-engineering/Harness六大组件"
+      ]
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-01-why-capable-agents-still-fail.md": {
+      "source_id": "source-68d96e8eb409",
+      "content_hash": "sha256:91c902c6fea254be689f3abc0fe6589f14679563d244e154e06ed4230926dbd3",
+      "size_bytes": 11816,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-02-what-a-harness-actually-is.md": {
+      "source_id": "source-5b1c68d00a21",
+      "content_hash": "sha256:b750720964cbe4c9d2230b4608e87cdc82e0f3926738a3c1b27954e95560fdce",
+      "size_bytes": 10232,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-03-why-the-repository-must-become-the-system-of-record.md": {
+      "source_id": "source-108846cfb6a1",
+      "content_hash": "sha256:89375b363d824ef9e0712b84f437584cf6121110bd7482ae5f9a7b05389b86de",
+      "size_bytes": 11558,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-04-why-one-giant-instruction-file-fails.md": {
+      "source_id": "source-ec1a55ba9794",
+      "content_hash": "sha256:effa8c439c123675f926a7694ed2a44bb126d6ab8f197823669efb66ef81b07b",
+      "size_bytes": 11221,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-05-why-long-running-tasks-lose-continuity.md": {
+      "source_id": "source-3ea8faecf380",
+      "content_hash": "sha256:68f157639c1b78ad55dc86c4ddbab598f096fb6c3cd88a6ac4e524aa66a9b30e",
+      "size_bytes": 13920,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-06-why-initialization-needs-its-own-phase.md": {
+      "source_id": "source-aae104c7407a",
+      "content_hash": "sha256:14542d52c6cb89290e18b01fe73801c0dbe94323ff8f099e150174278e1046e9",
+      "size_bytes": 11681,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-07-why-agents-overreach-and-under-finish.md": {
+      "source_id": "source-2d67f283aad2",
+      "content_hash": "sha256:073464cc9708f148b1597cec58c2e7f772685581b347e0e307bfec9f44f5f0c4",
+      "size_bytes": 9958,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-08-why-feature-lists-are-harness-primitives.md": {
+      "source_id": "source-c215283c2d56",
+      "content_hash": "sha256:74a169e4ee4881b39986f8d2d94fef7b7fd4c864234a0d5517e402e4f045293e",
+      "size_bytes": 9990,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-09-why-agents-declare-victory-too-early.md": {
+      "source_id": "source-cd0e416b7cbb",
+      "content_hash": "sha256:6eb43b719a36f687ff7c8fc40cb5503816c57b5b75b6061214cc843476e3350f",
+      "size_bytes": 11426,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-10-why-end-to-end-testing-changes-results.md": {
+      "source_id": "source-cfffe3f42b96",
+      "content_hash": "sha256:88e3db716e01ed2f05ea68e3ab60e10139e7c6ad2c15e09940be361cf586e09b",
+      "size_bytes": 11717,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-11-why-observability-belongs-inside-the-harness.md": {
+      "source_id": "source-ae02642c226d",
+      "content_hash": "sha256:8b61fbf597e77412d8275aedc6850f8ed063c21a5d6ce145dbbed64e66c83587",
+      "size_bytes": 13475,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-12-why-every-session-must-leave-a-clean-state.md": {
+      "source_id": "source-4f5f7f900652",
+      "content_hash": "sha256:5368637a228058c9a29506094069675ac5dcf55c9c769bc6ad853e03faa1a81b",
+      "size_bytes": 14867,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/harness-engineering/managed-agents-scaling.md": {
+      "source_id": "source-e3002458d881",
+      "content_hash": "sha256:b49e7e05526e6675ba8994ac993748b163114188f04a2647d7a2f18d3fcc3fb9",
+      "size_bytes": 39500,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/hermes-agent自我改进循环源码解读.md": {
+      "source_id": "source-5e957d40302a",
+      "content_hash": "sha256:0cacf20cf81c4cccfe96e15a64a3ab01f3aad81c891592faabf34f723ec35b11",
+      "size_bytes": 59593,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "concept/hermes-agent/自我改进循环"
+      ]
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/20260506-20260509分支改动复盘.md": {
+      "source_id": "source-3a69bced0738",
+      "content_hash": "sha256:eb90cbf9a70b6f41a0d9fca134c399eb19bfe88e39b396e61b2958f4fcec30a8",
+      "size_bytes": 2073,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支与上游同步约定.md": {
+      "source_id": "source-d5945cd523d2",
+      "content_hash": "sha256:5dbbc721f7595d0d8690f7bf747087b4a6167ad4a87b27bc05c570a03f835608",
+      "size_bytes": 1755,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260506-A2UI扩展化与部署基础.md": {
+      "source_id": "source-39e9a38b2f3d",
+      "content_hash": "sha256:cc43fc4d9a3a08b34903129ed67d40422727a36d5c931586e2dfeb8f47c87327",
+      "size_bytes": 4297,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260507-A2UI生成优化.md": {
+      "source_id": "source-7b12b9cbb799",
+      "content_hash": "sha256:88892de4f43e9dd9d37b77307e83e511b9fbd38d8fb57641354f172d3a6fe9b1",
+      "size_bytes": 2681,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260508-全量流式与日志能力.md": {
+      "source_id": "source-ffdd5c65d643",
+      "content_hash": "sha256:460b28e5c79e2af7abc1d72888e2605efc579f2ee6200c28d826c80e4b717984",
+      "size_bytes": 3687,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260509-A2UI编辑局部Patch.md": {
+      "source_id": "source-0255b059ef9f",
+      "content_hash": "sha256:0f2210bed16177bee1d64c163d4f2e4dd0fb70cad2f4915a7b58108db7d92d5b",
+      "size_bytes": 4024,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/改造目标.md": {
+      "source_id": "source-3a5c1099c34b",
+      "content_hash": "sha256:0519c7940467c0de830440a840a464e5aec332c6edf860e67ad510b58b4271d6",
+      "size_bytes": 4582,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/pyproject-toml中文详解.md": {
+      "source_id": "source-d335c8eee647",
+      "content_hash": "sha256:1078f28f9907a9ce1e1dea60f9aec1b497a873456d3194cf997cabba35e1ae08",
+      "size_bytes": 18084,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/本地持久化存储说明.md": {
+      "source_id": "source-3bdc5c7ee546",
+      "content_hash": "sha256:2ccf7a74ca89af5956d3f9ecab9f0540a034cafd73ff1a0f6e49dac1f03667c0",
+      "size_bytes": 13964,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/源码熟悉顺序.md": {
+      "source_id": "source-58da9372eeb2",
+      "content_hash": "sha256:7a3721d95243a348b2cdb09d2f18d900ef100f5ff38909ce746630c47b1d7760",
+      "size_bytes": 4701,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/熟悉与二次开发实战指南.md": {
+      "source_id": "source-ca9e4920a03f",
+      "content_hash": "sha256:0a717dc422c7e7d75cf337b2a476d05b162451cf41149cd4e29fb3e7c2096b2b",
+      "size_bytes": 18361,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第2步-吃透主循环.md": {
+      "source_id": "source-da8edb4b5fa2",
+      "content_hash": "sha256:7c99ff09e40d6b18278388224c6b1dc9f26693401c6180ad909d58105b23c85c",
+      "size_bytes": 42517,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第3步-吃透工具注册与执行链.md": {
+      "source_id": "source-33c7ffb122cb",
+      "content_hash": "sha256:8bd1335ad161a9c287fad88a9c7105adaca16b5e9d17b43bb5e549d63c82fa23",
+      "size_bytes": 35159,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第4步-吃透模型提供方与传输链.md": {
+      "source_id": "source-fb0171ccd4c6",
+      "content_hash": "sha256:0b55b0bb70a17ec5d723b1a5f81b2e95bc106a354b0e2367d7bcffc11683f260",
+      "size_bytes": 44957,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/系统提示词.md": {
+      "source_id": "source-df6e51a99f3b",
+      "content_hash": "sha256:078cf2043ab5ff6967e5d9f1932e3d26d84c08185eec3cd92f070cbad1ada223",
+      "size_bytes": 1651,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/Gemini登录提供方实现计划.md": {
+      "source_id": "source-bf0c9faa035f",
+      "content_hash": "sha256:a090bd2e76b77640aeb45ee1b0b54d78e360d1cb3755ab765bd166c91eebf818",
+      "size_bytes": 4287,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/JD公司大模型代码走查手册.md": {
+      "source_id": "source-e39c117df9d3",
+      "content_hash": "sha256:92b72832ce4e50d93e8056adb7d68ce59c8241acaa93a6436bf730f03ad9590f",
+      "size_bytes": 23897,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/JD公司大模型迁移技术设计与复盘.md": {
+      "source_id": "source-a1d1eed34229",
+      "content_hash": "sha256:4b07a0aa7192daf94a85799760c834399ca719d7474161ba188bd524e2131b20",
+      "size_bytes": 17942,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/A2UI能力扩展化接入实现说明.md": {
+      "source_id": "source-ad7b6ab5a770",
+      "content_hash": "sha256:78dac1d1241a4c2fe9fd6238e414509a1ee6b02866666b13c4bc97cd82d23454",
+      "size_bytes": 28812,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/A2UI能力测试用例.md": {
+      "source_id": "source-d32f080e58d6",
+      "content_hash": "sha256:5f1be86543f24ebe6459fc0f9d21ce6e602427dd0015ff75016a79698b686861",
+      "size_bytes": 9338,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/Deco MCP使用手册.md": {
+      "source_id": "source-44822ce5e565",
+      "content_hash": "sha256:1c6ec4b4d44d265628ea60651ab5a5524abec2bbf5da012b7c9828d24c3fc58c",
+      "size_bytes": 8135,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/api-chat-A2UI对话统一Checkpoint回退接口文档.md": {
+      "source_id": "source-28309696d405",
+      "content_hash": "sha256:18cd64e95d9382a86df39b2498a10744e0a702234fe5e8c9564d3fad58d76824",
+      "size_bytes": 16935,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/api-chat接入Relay-Deco-MCP实现说明.md": {
+      "source_id": "source-4d09fb494863",
+      "content_hash": "sha256:7e584fd1f7684da0e8a30c8b22ea23cf2bb2853b92a8e79f4581811499ec09f3",
+      "size_bytes": 32054,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/jd-dev-20260513-A2UI当前待提交代码走查手册.md": {
+      "source_id": "source-74b3e0fd5c0a",
+      "content_hash": "sha256:d039c02cf35b81c56bb7627cb89a55a831cb2a2b0eb2e5b89cea3add4c57a8a1",
+      "size_bytes": 11752,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/jd-dev-20260513-A2UI当前待提交代码走查结果.md": {
+      "source_id": "source-5ea5c59a16bd",
+      "content_hash": "sha256:a5ceca91cf3ea834f459b06654c7f004370b3a65e22350c64b83d600bc4f9fff",
+      "size_bytes": 12735,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/04-部署联调/A2UI前端本地联调启动指南.md": {
+      "source_id": "source-d0a3ef6b9b4a",
+      "content_hash": "sha256:74e11e75cc5deeb9c16ab37ff97634e71107c9d939d269b93237c4b0b28a9c06",
+      "size_bytes": 8323,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/04-部署联调/公司云端部署指南.md": {
+      "source_id": "source-92b805e9f8fb",
+      "content_hash": "sha256:508339562017811bbc3fb847c82511f53eebe3894a3ba55717606130fc7baf4f",
+      "size_bytes": 12732,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-agent-docs/plans/目录索引.md": {
+      "source_id": "source-c6dac538c89e",
+      "content_hash": "sha256:f4ceabffb7dc77a5a6342f91d2b14d0965eeefb2563f56480279d001ef76136d",
+      "size_bytes": 2316,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/hermes-webui/Hermes_WebUI_深度技术原理文档.md": {
+      "source_id": "source-5cf19ac48b30",
+      "content_hash": "sha256:3b601cfebb51850e4274105a66a38ac428ad47414273221fb05bf02e840740f4",
+      "size_bytes": 35339,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/open-tag/open-tag-智能体编排实现详解.md": {
+      "source_id": "source-36673fefc236",
+      "content_hash": "sha256:cb20b5860a81e5de732190836bb5fbf7f9ab41de2c35a368de67385b996deb8d",
+      "size_bytes": 53838,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/OpenClaw的SubAgent经验总结.md": {
+      "source_id": "source-6702cca1c26d",
+      "content_hash": "sha256:a8f707b50b88df327640b4323f21a104a93325571e5eafbc3d985f6795b1b49b",
+      "size_bytes": 2035,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/assets/openclaw-skills加载机制与实战总结/file-20260413140240779.png": {
+      "source_id": "source-987c6919a515",
+      "content_hash": "sha256:3e7b2c5743646a83e18a3cea6b720f5eca2674c2155b36f305ba9cd9bf21e637",
+      "size_bytes": 89769,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/assets/openclaw-skills加载机制与实战总结/file-20260413140240780.png": {
+      "source_id": "source-a43dffb72369",
+      "content_hash": "sha256:84d1082ad5bdd8db9abde6cb8b738c88000a52dd5be72ee007b6206bf58811b4",
+      "size_bytes": 105213,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/openclaw-skills加载机制与实战总结.md": {
+      "source_id": "source-6b43d0e28aac",
+      "content_hash": "sha256:b022a3fb074ebb83781fb7bf2c2531dba14ad2a60ae5081600ca0ad179786713",
+      "size_bytes": 16187,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/openclaw_company_gateway_config_explained.md": {
+      "source_id": "source-2ba878a65977",
+      "content_hash": "sha256:2608ce2586fcd06636631e64bccf0568bf1e51094212f8554596d04ad0d7f741",
+      "size_bytes": 8602,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/openclaw经验总结/我与 Codex 的对话问答.md": {
+      "source_id": "source-afe52d890c25",
+      "content_hash": "sha256:646638a20ad8ca05121b50c96c6bf6b5103a43efc898ebc17c0784c4c7e936a9",
+      "size_bytes": 60272,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/other/OpenClaw与Hermes全面对比.md": {
+      "source_id": "source-1f5d332e076b",
+      "content_hash": "sha256:280e63704df1c69c0cbdfedbdecf0b99e6a516796535f24fc2420d95d710bf65",
+      "size_bytes": 13997,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/other/云端Agent基础设施的两条经验-中文翻译.md": {
+      "source_id": "source-c1eba5c5254f",
+      "content_hash": "sha256:4d9b7f7216d9a4fc236a049d7edb6e7617bca44b811ed36a78ea0c82d29d5033",
+      "size_bytes": 9582,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/other/沙箱机制说明文档.md": {
+      "source_id": "source-d0dcd91172d8",
+      "content_hash": "sha256:6152b87d55b957fde3e8d3f4d9f0be62cf9567a057de8e60877cdf8143608fcf",
+      "size_bytes": 6959,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/oxygent/source-code-deep-dive.md": {
+      "source_id": "source-b0d61be56896",
+      "content_hash": "sha256:55063b6a135843feda69849b3acb761329ec40c5c47cef0cbae41cfb037859b7",
+      "size_bytes": 53194,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/oxygent/问题.md": {
+      "source_id": "source-7dacf6abb147",
+      "content_hash": "sha256:3ea7af681c60bfec9c45afcfc65e038db5843b3f2f9ef1fcc4282397cdeb0dee",
+      "size_bytes": 12494,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/pi/Pi Agent Harness源码设计精读.md": {
+      "source_id": "source-4451b8d5e7a4",
+      "content_hash": "sha256:28b727375cfdba517685a02b0f6e654bbdc6c8871687141d4c30ed6622b872ce",
+      "size_bytes": 96937,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": [
+        "index/pi-agent-harness",
+        "source/Pi Agent Harness源码设计精读"
+      ]
+    },
+    "raw/sources/ragent/Ragent企业级Agentic RAG源码精读.md": {
+      "source_id": "source-b71b45c9e77b",
+      "content_hash": "sha256:f5437583345d9ffd0a8193ef5e5720fb937518a93ce5f523482fa87391485a59",
+      "size_bytes": 64890,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/smolagents/SMOLAGENTS_深度讲解文档.md": {
+      "source_id": "source-b996563a4f9a",
+      "content_hash": "sha256:d122267b55deed967752852043c6ead54e7e4a05fc8b380e21b1e52fc3d584a6",
+      "size_bytes": 37301,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/tencentdb-agent-memory/TencentDB-Agent-Memory项目深度讲解.md": {
+      "source_id": "source-efcc2e1ccb7d",
+      "content_hash": "sha256:50574ea20e08d76790106093a316ae25968293f56cd4becc18ea99b854a181c6",
+      "size_bytes": 58409,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/Agent Harness Engineering A Survey.md": {
+      "source_id": "source-c0f4584d27a5",
+      "content_hash": "sha256:8bcc599d0a9a75cbc72f4594d85bce7077c6690a2ebbef88ea4e154bee374047",
+      "size_bytes": 191142,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/Are We Ready For An Agent-Native Memory System-with-annotations.pdf": {
+      "source_id": "source-312790ffb887",
+      "content_hash": "sha256:c3219dd0c689c30cc3485737fd2079214b2d929a91b422612bcb9df11e9b227b",
+      "size_bytes": 1698843,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/Compositional Skill Routing for LLM Agents 中文导读.md": {
+      "source_id": "source-086839a31a9e",
+      "content_hash": "sha256:c8e86e436f39c0e39b599c3391ddc924fcdb88bdcd46ff9777fcbf0ac1dfb33a",
+      "size_bytes": 8746,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/LLM-As-Judge.md": {
+      "source_id": "source-a0fc7816dada",
+      "content_hash": "sha256:b921ddc9398bf61a563e41b0051f8a6586578f34af02f030a1b19c00af0bfafb",
+      "size_bytes": 68696,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/LLM-as-judge-原文.pdf": {
+      "source_id": "source-9508c97b4a5b",
+      "content_hash": "sha256:07f1a0a8318eb82c547094dfbcec6f2a78fea6bf34e3a0cf02b7efc287073479",
+      "size_bytes": 1005671,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/Loop Engineering - Addy Osmani.md": {
+      "source_id": "source-5dbd6336db31",
+      "content_hash": "sha256:c9b5acb1c9e1c39532d3c3466ff0a6eff6cf57afa01b8e0ea55cb58f62c1c085",
+      "size_bytes": 15323,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/agent_native_memory_system_zh.md": {
+      "source_id": "source-3a420d86c0b2",
+      "content_hash": "sha256:84045cfd63b40808be9061ac50b382d738fdf8d2427ff9598336f0ca0024ee18",
+      "size_bytes": 73483,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/compositional_skill_routing.md": {
+      "source_id": "source-f0d61f88270d",
+      "content_hash": "sha256:852ecde325d228337c4ecad356f17b15ccd30f27a8fb3ef5aa87c8fd32174dcc",
+      "size_bytes": 54299,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/compositional_skill_routing原文.pdf": {
+      "source_id": "source-5462bcfbea68",
+      "content_hash": "sha256:b9c67ef361c8fdcfe760e6193e4bc658e374de1744fb5ca3e8c0ef6eaedc264c",
+      "size_bytes": 396220,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/dive_into_claude_code_中文.md": {
+      "source_id": "source-12efc9c90f08",
+      "content_hash": "sha256:ef0c7aab3312eda91237185f9b635472e4be4f2937414b5a77478c8b8cca0114",
+      "size_bytes": 95855,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/dive_into_claude_code原文.pdf": {
+      "source_id": "source-13ed05ea4ea6",
+      "content_hash": "sha256:a4c3c92070557d693125850ab40d8249dbb3967988c919e95a6f46caa4ab62b9",
+      "size_bytes": 1390792,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/peter-steinberger-openclaw-loop-engineering-zh.md": {
+      "source_id": "source-e63995187579",
+      "content_hash": "sha256:84f2c77b7f1107b44fdfd717cfc193b15ccbcc7042296ad9bfa23af89976953f",
+      "size_bytes": 18629,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/人人都在谈论LLM但没人解释它们底层到底如何工作.md": {
+      "source_id": "source-dce58f5ad714",
+      "content_hash": "sha256:0893210399cc5c76c9ebdf10f3dc3d690e0b495edec57c79f1954958034fd6e5",
+      "size_bytes": 31277,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/面向大语言模型智能体的生成式技能组合.md": {
+      "source_id": "source-c6372c7dcc42",
+      "content_hash": "sha256:e175d65ceeb9db6e113dfb619365c10bfb4f4b6c69647aad5af0fcc5eae61e0c",
+      "size_bytes": 32959,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    },
+    "raw/sources/文章/面向大语言模型智能体的生成式技能组合.pdf": {
+      "source_id": "source-52a986b5da08",
+      "content_hash": "sha256:cec80b43669b84df2ed4162a954f58fa0269e69127e437548b855aa1d15b562c",
+      "size_bytes": 1074946,
+      "modified_at": "2026-07-29T22:31:22+08:00",
+      "status": "unchanged",
+      "pages": []
+    }
+  }
+}

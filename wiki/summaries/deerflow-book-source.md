@@ -1,5 +1,14 @@
 ---
 title: 来源 - deerflow-book
+type: source
+id: source/deerflow-book-source
+status: active
+aliases: []
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # 来源信息

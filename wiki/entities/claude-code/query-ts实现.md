@@ -1,11 +1,17 @@
 ---
 title: query.ts 实现
+id: entity/claude-code/query-ts实现
 type: entity
+status: active
 tags: [claude-code, 核心组件, query-loop, async-generator]
+aliases: []
 created: 2026-04-06
 updated: 2026-04-06
 sources: [claude-code-deep-dive-main/05-Agentic对话循环机制.md]
 related: [queryengine对话引擎, agentic对话循环机制]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # query.ts — Agentic Loop 实现
@@ -113,3 +119,8 @@ return { reason: 'prompt_too_long' }    // 上下文超限
 return { reason: 'max_turns' }          // 达到轮次上限
 return { reason: 'budget_exceeded' }    // 预算耗尽
 ```
+
+## 关联页面
+
+- [[entities/claude-code/queryengine对话引擎|queryengine对话引擎]]
+- [[concepts/claude-code/agentic对话循环机制|agentic对话循环机制]]

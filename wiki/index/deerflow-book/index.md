@@ -1,3 +1,19 @@
+---
+id: index/deerflow-book
+title: deerflow-book
+type: index
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # deerflow-book
 
 > 主题索引页 — 本页是该主题的入口，汇总该主题下所有页面
@@ -26,4 +42,4 @@
 
 ---
 
-_最后更新：2026-04-12_
+_最后更新：2026-08-01_

@@ -1,3 +1,19 @@
+---
+id: entity/deerflow-book/LangGraph引擎
+title: LangGraph 引擎
+type: entity
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # LangGraph 引擎
 
 **LangGraph 引擎** 是 DeerFlow 的执行骨架——基于 LangGraph 库的图形化 Agent 编排框架，将 Lead Agent 的 ReAct 循环建模为一个状态图，通过图的遍历驱动 Agent 的思考-行动-观察迭代。DeerFlow 0.3 的重写将 Agent 编排从 LangChain 的 Chain 模式迁移到 LangGraph，核心动机是获得**持久化检查点（Checkpointing）**和**图的确定性执行**。
@@ -144,4 +160,4 @@ LangGraph 引擎是 DeerFlow 0.3 重写的核心基础设施——通过将 ReAc
 
 ---
 
-_关联概念：[[entities/LeadAgent大脑]] [[concepts/ReAct循环]] [[entities/中间件管道]] [[concepts/延迟初始化]]_
+_关联概念：[[entities/deerflow-book/LeadAgent大脑]] [[concepts/deerflow-book/ReAct循环]] [[entities/deerflow-book/中间件管道]] [[concepts/deerflow-book/延迟初始化]]_

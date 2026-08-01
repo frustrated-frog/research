@@ -1,3 +1,19 @@
+---
+id: entity/deerflow-book/LeadAgent大脑
+title: Lead Agent（大脑核心）
+type: entity
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # Lead Agent（大脑核心）
 
 **Lead Agent** 是 DeerFlow 的核心编排引擎——它负责理解用户意图、规划执行步骤、调用工具、与 Sub-agent 协作，最终产出用户需要的结果。所有用户请求都经过 Lead Agent 的 ReAct 循环处理，它就像一个项目主管，知道什么时候该亲自动手，什么时候该委派给专业人员。
@@ -165,4 +181,4 @@ Lead Agent 是 DeerFlow 的中枢——它接收用户请求，通过 LangGraph 
 
 ---
 
-_关联概念：[[entities/LangGraph引擎]] [[concepts/ReAct循环]] [[entities/中间件管道]] [[concepts/上下文隔离]]_
+_关联概念：[[entities/deerflow-book/LangGraph引擎]] [[concepts/deerflow-book/ReAct循环]] [[entities/deerflow-book/中间件管道]] [[concepts/deerflow-book/上下文隔离]]_

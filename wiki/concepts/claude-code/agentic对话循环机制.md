@@ -1,11 +1,17 @@
 ---
 title: Agentic 对话循环机制
+id: concept/claude-code/agentic对话循环机制
 type: concept
+status: active
 tags: [claude-code, agentic-loop, 对话系统, 流式处理]
+aliases: []
 created: 2026-04-06
 updated: 2026-04-06
 sources: [claude-code-deep-dive-main/05-Agentic对话循环机制.md]
 related: [工具架构与注册机制, 权限模型与审批流程, query-ts实现, queryengine对话引擎]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Agentic 对话循环机制
@@ -90,3 +96,10 @@ related: [工具架构与注册机制, 权限模型与审批流程, query-ts实�
 3. **错误恢复优于错误报告**：多层 fallback + 延迟揭示
 4. **并发安全优先**：写操作强制串行化
 5. **可观测性**：每个关键操作都有 checkpoint，transition 字段记录决策原因
+
+## 关联页面
+
+- [[concepts/claude-code/工具架构与注册机制|工具架构与注册机制]]
+- [[concepts/claude-code/权限模型与审批流程|权限模型与审批流程]]
+- [[entities/claude-code/query-ts实现|query-ts实现]]
+- [[entities/claude-code/queryengine对话引擎|queryengine对话引擎]]

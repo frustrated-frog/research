@@ -1,9 +1,17 @@
 ---
 title: Harness Engineering
+id: index/harness-engineering
 type: index
+status: active
 tags: [harness, agent, AI-engineering]
+aliases: []
 created: 2026-05-14
 updated: 2026-05-14
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Harness Engineering

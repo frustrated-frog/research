@@ -1,11 +1,17 @@
 ---
 title: 任务边界与WIP限制
+id: concept/harness-engineering/任务边界与WIP限制
 type: concept
+status: active
 tags: [WIP, task-boundary, scope, agent]
+aliases: []
 created: 2026-05-14
 updated: 2026-05-14
 sources: []
 related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # 任务边界与WIP限制

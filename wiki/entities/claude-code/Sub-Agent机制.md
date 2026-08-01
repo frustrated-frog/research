@@ -1,11 +1,17 @@
 ---
 title: Sub-Agent 机制
+id: entity/claude-code/Sub-Agent机制
 type: entity
+status: active
 tags: [claude-code, sub-agent, coordinator, worker, 并行执行]
+aliases: []
 created: 2026-05-25
 updated: 2026-05-25
 sources: [claude-code-deep-dive-main/21-Sub-Agent机制.md]
 related: [agentic对话循环机制, Skills技能扩展, queryengine对话引擎]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Sub-Agent 机制
@@ -132,6 +138,11 @@ Sub-agent 不适合：
 
 DeerFlow 的 [[../../entities/deerflow-book/子智能体]] 采用 Lead Agent + `task` 工具 + SubagentExecutor：
 
+## 关联页面
+
+- [[entities/claude-code/Skills技能扩展|Skills技能扩展]]
+- [[entities/claude-code/queryengine对话引擎|queryengine对话引擎]]
+
 - 每个 Sub-agent 独立消息历史
 - SubagentExecutor 管理任务状态机
 - `SubagentLimitMiddleware` 限制并发数量
@@ -151,4 +162,3 @@ Claude Code 更强调 Coordinator/Worker 和 worktree/remote 隔离；DeerFlow �
 - 是否有并发上限？
 
 没有这些约束的多 Agent，只是更贵、更乱的单 Agent。
-

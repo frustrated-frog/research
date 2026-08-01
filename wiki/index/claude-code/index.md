@@ -1,3 +1,19 @@
+---
+id: index/claude-code
+title: claude-code
+type: index
+status: active
+tags: [wiki, claude-code]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # claude-code
 
 > 主题索引页 — 本页是该主题的入口，汇总该主题下所有页面
@@ -20,4 +36,4 @@
 
 ---
 
-_最后更新：2026-05-25_
+_最后更新：2026-08-01_

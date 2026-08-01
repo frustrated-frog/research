@@ -1,10 +1,17 @@
 ---
 title: AIAgent 核心循环
+id: entity/hermes-agent/aiagent核心循环
 type: entity
+status: active
 tags: [hermes-agent, 核心引擎, run-agent-py]
+aliases: []
 created: 2026-04-07
 updated: 2026-04-07
 related: [hermescli, 网关系统, 工具架构, 会话存储]
+sources: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # AIAgent 核心循环
@@ -125,3 +132,10 @@ AIAgent 是 Hermes 的**同步编排引擎**，负责：
 | 可中断 | API 调用和工具执行可被用户输入或信号取消 |
 | 平台无关核心 | 一个 AIAgent 类服务所有入口 |
 | 松耦合 | 可选子系统使用注册表模式和 check_fn 门控 |
+
+## 关联页面
+
+- [[entities/hermes-agent/hermescli|hermescli]]
+- [[entities/hermes-agent/网关系统|网关系统]]
+- [[concepts/hermes-agent/工具架构|工具架构]]
+- [[entities/hermes-agent/会话存储|会话存储]]

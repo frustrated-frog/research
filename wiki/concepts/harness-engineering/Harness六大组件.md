@@ -1,11 +1,22 @@
 ---
 title: Harness 六大组件
+id: concept/harness-engineering/Harness六大组件
 type: concept
+status: active
 tags: [Harness, AI Agent, 文件系统, 沙箱, 记忆, Web Search, MCP, 上下文工程, 编排, Hooks]
+aliases: []
 created: 2026-04-08
 updated: 2026-04-08
 related: [上下文工程, 自我改进循环]
-sources: [Harness六大组件深度解读.md](../../raw/sources/harness-engineering/Harness六大组件深度解读.md)
+valid_from: null
+valid_to: null
+superseded_by: null
+sources:
+  - source_id: source-harness-six-components
+    path: raw/sources/harness-engineering/Harness六大组件深度解读.md
+    locator: "全文"
+    claim_type: extracted
+    confidence: high
 ---
 
 # Harness 六大组件
@@ -141,3 +152,8 @@ System Prompt 在 Harness 中扮演四个角色：
 真正在生产环境中创造价值的，往往不是那个最强的模型，而是那个最好的 Harness。
 
 如果你不是模型本身，那你就是 Harness 的一部分——System Prompt 是神经系统，工具链是四肢，记忆机制是长期记忆，上下文策略是注意力管理，Hook 规则是质量底线。
+
+## 关联页面
+
+- [[concepts/hermes-agent/自我改进循环|自我改进循环]]
+- [[concepts/harness-engineering/Harness驾驭层|Harness驾驭层]]

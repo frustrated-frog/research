@@ -1,11 +1,17 @@
 ---
 title: Harness驾驭层
+id: concept/harness-engineering/Harness驾驭层
 type: concept
+status: active
 tags: [harness, agent, framework]
+aliases: []
 created: 2026-05-14
 updated: 2026-05-14
 sources: []
 related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Harness驾驭层
@@ -68,4 +74,4 @@ Harness 本质上是五层防御体系：
 
 ## 与其他概念的关系
 
-_关联概念：[[concepts/harness-engineering/上下文连续性]] [[concepts/harness-engineering/功能清单]] [[concepts/harness-engineering/可观测性]] [[entities/harness-engineering/AGENTS.md文件]]_
+_关联概念：[[concepts/harness-engineering/Harness六大组件|Harness六大组件]] [[concepts/harness-engineering/上下文连续性]] [[concepts/harness-engineering/功能清单]] [[concepts/harness-engineering/可观测性]] [[entities/harness-engineering/AGENTS.md文件]]_

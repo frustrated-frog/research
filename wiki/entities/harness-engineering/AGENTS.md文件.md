@@ -1,11 +1,17 @@
 ---
 title: AGENTS.md文件
+id: entity/harness-engineering/AGENTS.md文件
 type: entity
+status: active
 tags: [AGENTS.md, CLAUDE.md, instruction, harness]
+aliases: []
 created: 2026-05-14
 updated: 2026-05-14
 sources: []
 related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # AGENTS.md文件
@@ -46,8 +52,8 @@ Python 3.11 FastAPI 后端，PostgreSQL 15 数据库。
 - 所有 PR 必须通过 pytest + mypy --strict + ruff check
 
 ## 专题文档
-- [API 设计规范](docs/api-patterns.md) — 添加新端点时必读
-- [数据库操作约束](docs/database-rules.md) — 涉及数据库修改时必读
+- `docs/api-patterns.md` — 添加新端点时必读
+- `docs/database-rules.md` — 涉及数据库修改时必读
 ```
 
 ### 不是百科全书，而是路由器

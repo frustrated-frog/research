@@ -1,3 +1,19 @@
+---
+id: concept/deerflow-book/Harness与Framework
+title: Harness 与 Framework
+type: concept
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # Harness 与 Framework
 
 DeerFlow 在官方文档中对自己的定位经历了一次重要修正——从"AI Framework"到"AI Harness"。这个措辞变化不是营销用语，而是精确描述了 DeerFlow 的技术本质和设计边界。
@@ -55,4 +71,4 @@ DeerFlow 选择"Harness"而非"Framework"作为自我定义，是一次精准的
 
 ---
 
-_关联概念：[[entities/LangGraph引擎]] [[entities/Skills系统]] [[concepts/长时程Agent]]_
+_关联概念：[[entities/deerflow-book/LangGraph引擎]] [[entities/deerflow-book/Skills系统]] [[concepts/deerflow-book/长时程Agent]]_

@@ -1,10 +1,17 @@
 ---
 title: HermesCLI
+id: entity/hermes-agent/hermescli
 type: entity
+status: active
 tags: [hermes-agent, cli, 交互界面]
+aliases: []
 created: 2026-04-07
 updated: 2026-04-07
 related: [aiagent核心循环, 网关系统]
+sources: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # HermesCLI
@@ -85,3 +92,8 @@ hermes chat --toolsets skills -q "What skills do you have?"
 - clarify：请求用户澄清
 - sudo：密码提升请求
 - approval：命令审批
+
+## 关联页面
+
+- [[entities/hermes-agent/aiagent核心循环|aiagent核心循环]]
+- [[entities/hermes-agent/网关系统|网关系统]]

@@ -1,11 +1,17 @@
 ---
 title: Pi Agent Harness 源码设计精读
+id: source/pi-agent-harness/pi-agent-harness-source-design
 type: source
+status: active
 tags: [Pi, Agent, Harness, 会话持久化, 工具调用, 上下文压缩]
+aliases: []
 created: 2026-07-29
 updated: 2026-07-29
 sources: [raw/sources/pi/Pi Agent Harness源码设计精读.md]
 related: [index/pi-agent-harness/index.md, concepts/harness-engineering/Harness驾驭层.md]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Pi Agent Harness 源码设计精读
@@ -64,4 +70,3 @@ Pi 将专业 Agent 拆成模型协议、Agent 循环、有状态运行时、编�
 ---
 
 _关联概念：[[concepts/harness-engineering/Harness驾驭层]] [[concepts/harness-engineering/上下文连续性]] [[concepts/claude-code/流式响应与事件处理]] [[concepts/claude-code/上下文压缩策略]]_
-

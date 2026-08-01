@@ -1,3 +1,19 @@
+---
+id: concept/deerflow-book/长时程Agent
+title: 长时程 Agent
+type: concept
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # 长时程 Agent
 
 **长时程 Agent（Long-horizon Agent）** 是 DeerFlow 核心设计的起点——一种能够完成复杂、多步骤、跨越数十轮交互而不出错的 AI Agent 类型。与简单的"问答式"AI 不同，长时程 Agent 必须像一位经验丰富的项目经理一样：理解宏观目标、规划执行步骤、在遇到挫折时自我修正、最终交付完整成果。
@@ -52,4 +68,4 @@ DeerFlow 的整个架构都是围绕长时程 Agent 的需求设计的：
 
 ---
 
-_关联概念：[[concepts/ReAct循环]] [[concepts/上下文隔离]] [[concepts/渐进式加载]]_
+_关联概念：[[concepts/deerflow-book/ReAct循环]] [[concepts/deerflow-book/上下文隔离]] [[concepts/deerflow-book/渐进式加载]]_

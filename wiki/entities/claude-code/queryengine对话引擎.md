@@ -1,11 +1,17 @@
 ---
 title: QueryEngine
+id: entity/claude-code/queryengine对话引擎
 type: entity
+status: active
 tags: [claude-code, 核心组件, 对话引擎]
+aliases: []
 created: 2026-04-06
 updated: 2026-04-06
 sources: [claude-code-deep-dive-main/04-核心架构总览.md, 05-Agentic对话循环机制.md]
 related: [query-ts实现, agentic对话循环机制]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # QueryEngine — 对话引擎
@@ -68,3 +74,8 @@ query(params) 或 返回本地命令输出
 1. **早期持久化**：在进入 query() 循环之前就写入 transcript，进程被杀也能恢复
 2. **双模式持久化**：交互模式同步（~4-30ms），`--bare` 模式异步
 3. **权限拒绝跟踪**：自动记录所有被拒工具调用，用于 SDK 报告
+
+## 关联页面
+
+- [[entities/claude-code/query-ts实现|query-ts实现]]
+- [[concepts/claude-code/agentic对话循环机制|agentic对话循环机制]]

@@ -1,3 +1,19 @@
+---
+id: entity/deerflow-book/Skills系统
+title: Skills 系统
+type: entity
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # Skills 系统
 
 **Skills 系统** 是 DeerFlow 的能力扩展核心——通过编写 `SKILL.md` 文件，开发者可以定义任何复杂度的 Agent 工作流程，并将这些工作流程作为 DeerFlow 的内置能力来使用。Skills 系统让 DeerFlow 成为一个"可以学新技能的 AI 助手"，而非"只能做固定事情的工具"。

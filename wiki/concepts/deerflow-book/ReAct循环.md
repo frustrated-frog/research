@@ -1,3 +1,19 @@
+---
+id: concept/deerflow-book/ReAct循环
+title: ReAct 循环
+type: concept
+status: active
+tags: [wiki, deerflow-book]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # ReAct 循环
 
 **ReAct（Reason + Act）** 是 DeerFlow Lead Agent 的核心执行循环——一个将推理（Reason）和行动（Act）交替进行的循环模式，让 Agent 能够像人类一样边想边做、边做边反思，而不是一次性生成全部答案。
@@ -97,4 +113,4 @@ ReAct 循环是 DeerFlow Lead Agent 的大脑核心工作模式。它将 LLM 的
 
 ---
 
-_关联概念：[[entities/LangGraph引擎]] [[entities/LeadAgent大脑]] [[concepts/长时程Agent]]_
+_关联概念：[[entities/deerflow-book/LangGraph引擎]] [[entities/deerflow-book/LeadAgent大脑]] [[concepts/deerflow-book/长时程Agent]]_

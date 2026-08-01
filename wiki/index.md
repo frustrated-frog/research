@@ -1,3 +1,19 @@
+---
+id: index/research-knowledge-base
+title: 研究知识库
+type: index
+status: active
+tags: [wiki, knowledge-wiki]
+aliases: []
+created: 2026-07-29
+updated: 2026-08-01
+sources: []
+related: []
+valid_from: null
+valid_to: null
+superseded_by: null
+---
+
 # 研究知识库
 
 > 基于 Wiki 思想管理的多主题知识体系
@@ -26,7 +42,8 @@
 - **entities/** — 所有实体/系统（按主题分目录）
 - **summaries/** — 所有来源摘要（1:1 对应原始文档）
 - **synthesis/** — 跨主题综合分析
-  - [ClaudeCode与DeerFlow设计思想精读.md](synthesis/ClaudeCode与DeerFlow设计思想精读.md)
+  - [hermes-agent与openclaw对比.md](synthesis/hermes-agent与openclaw对比.md)
+  - [架构全景分析.md](synthesis/架构全景分析.md)
 
 ---
 
@@ -34,6 +51,7 @@
 
 - [All-Concepts.md](All-Concepts.md) — 全部概念与实体索引
 - [All-Sources.md](All-Sources.md) — 全部来源索引
+- [manifest.json](manifest.json) — 原始来源哈希、摄入状态和 Wiki 页面映射
 
 ---
 
@@ -43,8 +61,8 @@
 - **概念总数**：30
 - **实体总数**：21
 - **来源摘要**：6
-- **综合分析**：3
+- **综合分析**：2
 
 ---
 
-_最后更新：2026-07-29_
+_最后更新：2026-08-01_

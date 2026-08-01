@@ -1,11 +1,17 @@
 ---
 title: Skills 技能扩展
+id: entity/claude-code/Skills技能扩展
 type: entity
+status: active
 tags: [claude-code, skills, prompt-as-capability, 扩展机制]
+aliases: []
 created: 2026-05-25
 updated: 2026-05-25
 sources: [claude-code-deep-dive-main/26-Skills技能扩展.md]
 related: [工具架构与注册机制, agentic对话循环机制]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Skills 技能扩展
@@ -104,6 +110,11 @@ Skill 不是无限信任的 prompt。Claude Code 对 Skill 有安全控制：
 
 DeerFlow 的 [[../../entities/deerflow-book/Skills系统]] 更强调渐进式加载：
 
+## 关联页面
+
+- [[concepts/claude-code/工具架构与注册机制|工具架构与注册机制]]
+- [[concepts/claude-code/agentic对话循环机制|agentic对话循环机制]]
+
 ```text
 name + description + location
   -> 按需读取 SKILL.md
@@ -126,4 +137,3 @@ Claude Code 更强调多来源、权限、Inline/Fork 执行模式。两者共�
 - 它如何输出可复用结果？
 
 如果一个能力需要多步判断、多工具配合、稳定输出格式，就应该考虑做成 Skill，而不是继续塞进系统提示。
-

@@ -1,10 +1,17 @@
 ---
 title: Hermes Agent 与 OpenClaw 对比
+id: synthesis/hermes-agent与openclaw对比
 type: synthesis
+status: active
 tags: [hermes-agent, openclaw, 对比分析, agent平台]
+aliases: []
 created: 2026-04-07
 updated: 2026-04-07
 related: [hermes-agent核心定位, 工具架构, 记忆系统, 技能系统]
+sources: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Hermes Agent 与 OpenClaw 对比

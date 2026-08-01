@@ -1,11 +1,17 @@
 ---
 title: Harness Engineering 完整课程
+id: source/Harness_Engineering_完整课程
 type: source
+status: active
 tags: [harness, agent, AI-engineering, openai, anthropic]
+aliases: []
 created: 2026-05-14
 updated: 2026-05-14
 sources: []
 related: []
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Harness Engineering 完整课程

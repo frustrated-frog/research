@@ -1,11 +1,17 @@
 ---
 title: Pi Agent Harness 主题索引
-type: entity
+id: index/pi-agent-harness
+type: index
+status: active
 tags: [Pi, Agent, Harness, 编码Agent]
+aliases: []
 created: 2026-07-29
 updated: 2026-07-29
 sources: [raw/sources/pi/Pi Agent Harness源码设计精读.md]
 related: [summaries/Pi Agent Harness源码设计精读.md]
+valid_from: null
+valid_to: null
+superseded_by: null
 ---
 
 # Pi Agent Harness
