@@ -674,8 +674,7 @@ graph TB
 任务状态：
 
 ```text
-todo -> in_progress -> in_review -> done
-                         -> closed
+todo -> in_progress -> in_review -> done -> closed
 ```
 
 实现点：
