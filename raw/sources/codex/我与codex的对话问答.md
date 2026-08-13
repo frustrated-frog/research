@@ -1705,3 +1705,147 @@ Codex 有几类处理：
 - 尽量保留当前任务关键状态；  
 - 让恢复/继续有一个结构化锚点；  
 - 减少 token 爆炸导致的硬失败。
+
+## 6. Skill 体系是如何做的？
+
+可以把 Skill 的完整生命周期理解为五段：
+
+1. 注册：把“技能体系”接入 Codex 的扩展机制
+2. 加载：从各处扫描并解析技能包
+3. 快照：为当前 turn 固定一份可用技能视图
+4. 选择与注入：模型先看目录，真正需要时再读手册
+5. 路由：根据技能属于谁，去正确的位置读取内容
+
+
+```mermaid
+flowchart TB
+    subgraph 注册层["1. 注册与装配"]
+        A["App Server 启动"]
+        B["创建 Extension Registry"]
+        C["注册 Skills Extension"]
+        D["注册技能来源<br>Executor Provider / Orchestrator Provider"]
+        E["Core 创建 SkillsService<br>负责 Host Skill"]
+    end
+
+    subgraph 加载层["2. Host Skill 发现与加载"]
+        F["根据 cwd 和配置计算 Skill Roots"]
+        G["扫描各 root 下的 SKILL.md"]
+        H["解析 YAML frontmatter"]
+        I["读取可选 agents/openai.yaml"]
+        J["命名空间、去重、启用/禁用规则"]
+        K["生成 SkillLoadOutcome"]
+    end
+
+    subgraph 快照层["3. 当前 Turn 的稳定视图"]
+        L["SkillsService 缓存或重建"]
+        M["HostSkillsSnapshot"]
+        N["写入 TurnContext / ExtensionData"]
+    end
+
+    subgraph 模型上下文["4. 目录、选择与注入"]
+        O["渲染可用技能目录<br>名称 + 描述 + 入口"]
+        P["模型或用户选择技能"]
+        Q{"选择方式"}
+        Q1["结构化选择 / 精确路径"]
+        Q2["$skill-name<br>仅名称唯一时"]
+        Q3["模型按目录判断后读取"]
+        R["读取完整 SKILL.md"]
+        S["注入为 SkillInstructions"]
+    end
+
+    subgraph 路由层["5. Skill Provider Router"]
+        T{"SkillAuthority"}
+        T1["Host<br>本机 / 仓库 / 插件 / 系统"]
+        T2["Executor<br>远程或容器执行环境"]
+        T3["Orchestrator<br>MCP 资源端"]
+        U["返回 SkillReadResult"]
+    end
+
+    subgraph 执行层["6. Agent Loop 继续"]
+        V["模型根据技能规则调用工具"]
+        W["ToolRouter 执行工具、权限检查"]
+        X["结果回写上下文"]
+        Y["下一次模型采样"]
+    end
+
+    A --> B --> C --> D
+    B --> E
+    E --> F --> G --> H --> I --> J --> K --> L --> M --> N
+    M --> O --> P --> Q
+    Q --> Q1 --> R
+    Q --> Q2 --> R
+    Q --> Q3 --> R
+    R --> T
+    T --> T1 --> U
+    T --> T2 --> U
+    T --> T3 --> U
+    U --> S --> V --> W --> X --> Y
+
+    classDef reg fill:#e3f2fd,stroke:#0d47a1,stroke-width:2px
+    classDef load fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef ctx fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef route fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef run fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+
+    class A,B,C,D,E reg
+    class F,G,H,I,J,K,L,M,N load
+    class O,P,Q,Q1,Q2,Q3,R,S ctx
+    class T,T1,T2,T3,U route
+    class V,W,X,Y run
+```
+
+先讲“注册”。App Server 启动时，会构建一个扩展注册表，Skill 体系作为一个 Extension 注册进去。它不是只注册一个函数，而是挂入几类生命周期能力：线程启动时初始化技能状态；配置变化时更新状态；构建模型上下文时贡献技能目录；每个 turn 开始时处理用户显式选择的技能；必要时还向模型暴露 `skills/list`、`skills/read` 这类工具。
+
+不过这里有一个容易混淆的点：当前架构把 Host Skill 和远程 Skill 分开了。Host Skill，也就是本机用户、当前仓库、内置系统和本地插件中的技能，主要由 Core 里的 `SkillsService` 发现和管理。Skill Extension 主要负责把 Executor Skill 和 Orchestrator Skill 接入统一流程。前者在远程容器、另一台机器等执行环境中；后者由编排端通过 MCP 资源接口提供。
+
+接着是加载。`SkillsService` 会根据当前 `cwd`、配置层、插件和临时额外目录，计算这一轮应扫描哪些 Skill root。典型来源包括用户级 `.agents/skills`、兼容位置下的用户技能目录、仓库中的 `.codex/skills` 和 `.agents/skills`、系统内置技能缓存、管理员级目录、插件携带的技能目录，以及 App Server 临时设置的 extra roots。
+
+它找到 `SKILL.md` 后，并不立即把全文塞进模型上下文。加载阶段只解析元数据：技能名称、描述、可选的短描述、依赖、界面信息和策略。主文件的 YAML frontmatter 缺少描述、格式错误等，会使该技能被跳过并产生警告；但可选的 `agents/openai.yaml` 读取失败不会阻断主技能，因为它只是附加元数据。
+
+加载器还要处理现实世界的麻烦：目录扫描有深度、目录数和文件数上限；用户、仓库、管理员来源通常可跟随目录软链接，系统内置技能则更保守；隐藏目录通常不会被普通扫描带入；插件技能会自动加命名空间，例如 `plugin-name:deploy`。这些机制共同避免扫描无限扩张、路径逃逸与技能重名。
+
+解析完成后，会形成 `SkillLoadOutcome`。它包含已发现技能、加载错误、被配置禁用的技能路径，以及“这个技能应通过哪个文件系统读取”的映射。随后它被封装为不可变的 `HostSkillsSnapshot`。所谓快照，就是当前 turn 不会因为外部目录在中途变化而看到前后不一致的技能集合。
+
+`SkillsService` 对快照做缓存，但缓存键不只是工作目录，也包含有效的技能根目录和启用/禁用规则。这样两个都在同一仓库目录下、但会话配置不同的任务，不会错误复用彼此的技能视图。修改额外根目录或相关配置时，缓存会被清除，下一轮再加载。
+
+然后进入“目录”和“完整手册”的分层。系统会把可用 Skill 渲染为模型可见的开发者上下文，大致是：
+
+```
+技能名：简短用途说明（入口位置）
+```
+
+这份目录有严格预算。技能太多时，描述会缩短，部分条目会省略，并伴随警告。这样模型能知道存在什么能力，却不需要始终携带每个技能的完整流程。`allow_implicit_invocation: false` 的技能通常不会被放进这个可供模型自行发现的目录，但仍可由用户明确选择。
+
+选择有三种主要方式。
+
+第一种是界面传入结构化的 Skill 选择；
+
+第二种是像你使用的 [$mermaid-diagrams](.../SKILL.md) 一样，以路径精确指向技能；
+
+第三种才是文本里的 $skill-name。纯名称匹配必须唯一，且不能和 App Connector 等其他能力重名，否则系统宁可不猜。这是为了防止模型或用户提到一个名字时，误加载另一份同名说明。
+
+一旦某个技能被明确选中，系统会读取完整 `SKILL.md`，把它包装成结构化的 `SkillInstructions` 上下文片段，加入当前 turn 的模型输入。若技能声明需要 MCP 服务，系统会先检查依赖是否安装，必要时请求安装或确认。注意，技能被加载不代表它自动获得执行权限；它只增加操作知识，后续工具调用仍要经过工具 schema、沙箱、审批和权限策略。
+
+你说的“Skill 路由器”，严格说是 `SkillProviders`。它不是全局的 `ToolRouter`，而是专门负责“这份 Skill 应向谁读取”的路由层。每个目录条目都会带三个关键身份：
+
+- `authority`：归属方，例如 Host、Executor、Orchestrator
+- `package`：技能包的稳定标识
+- `resource`：需要读取的具体资源标识，通常是主 `SKILL.md`
+
+读取时，路由器先按 `authority` 找对应 Provider，而不是把 resource 一律当成本地路径：
+
+- Host Provider：从当前 `HostSkillsSnapshot` 关联的本机或仓库文件系统读取。
+- Executor Provider：通过拥有该执行环境的文件系统读取，适配远程容器、Windows 执行器等情况。
+- Orchestrator Provider：通过 MCP Resource 接口列出和读取资源，有分页、超时、数量和单资源大小限制。
+
+这个设计的核心是“资源必须由其所有者读取”。所以远程环境的 Skill 不会被错误转换成本机绝对路径，编排端的 Skill 也不会变成任意文件读取能力。路由器还会验证 package 与 resource 的归属关系，避免模型构造一个无关路径，让某个 Provider 去读。
+
+Orchestrator Skill 特别像一个远程技能仓库。当前实现为模型提供 `skills/list` 和 `skills/read` 工具：模型先拿到不透明的 package/resource handle，再用它读取内容。它不能随便填一个远程文件路径。`skills/list/read` 本身进入的才是我们前面讲过的全局 `ToolRouter`，因此它们也会产生普通工具调用事件、结果项和后续模型采样。
+
+最后，技能内容不会替模型完成任务。它进入当前上下文后，模型再决定要调用哪些工具、要读哪些 references、要不要执行其 `scripts/`。工具结果回写历史，模型继续采样，直到任务结束。系统也会记录显式加载与隐式使用事件；当前还有一个 shadow selector 用来评估“仅凭用户输入和描述，能否预测模型实际用了哪项技能”，但它尚不负责替模型自动选择。
+
+整条链路可以压缩为一句话：
+
+> 注册 Provider 和生命周期钩子，加载并冻结当前技能快照，给模型一份受预算限制的目录，按需读取完整说明，再按资源归属路由读取与工具执行。
+
+

@@ -106,22 +106,24 @@ core 里最核心的通信抽象是 SQ/EQ：
 
 ```mermaid
 sequenceDiagram
-    participant Client as TUI / exec
-    participant AS as app-server
-    participant CT as CodexThread
-    participant SQ as Submission Queue
-    participant Loop as submission_loop
-    participant EQ as Event Queue
+    participant Client as "TUI / exec"
+    participant AS as "app-server"
+    participant CT as "CodexThread"
+    participant SQ as "Submission Queue"
+    participant SL as "submission_loop"
+    participant EQ as "Event Queue"
 
     Client->>AS: turn/start
     AS->>CT: submit Op::UserInput
     CT->>SQ: enqueue Submission
     AS-->>Client: TurnStartResponse(InProgress)
-    Loop->>SQ: recv Submission
-    Loop->>Loop: apply settings / create turn context / spawn RegularTask
-    Loop->>EQ: EventMsg::TurnStarted
-    Loop->>EQ: streaming items / tool events / token counts
-    Loop->>EQ: EventMsg::TurnComplete
+
+    SL->>SQ: recv Submission
+    SL->>SL: apply settings / create turn context / spawn RegularTask
+    SL->>EQ: EventMsg::TurnStarted
+    SL->>EQ: streaming items / tool events / token counts
+    SL->>EQ: EventMsg::TurnComplete
+
     AS->>EQ: listener consumes events
     AS-->>Client: typed notifications
 ```
