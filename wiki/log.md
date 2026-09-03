@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-09-03] ingest | HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?
+
+- 类型：source / concept evidence update
+- 来源：`raw/sources/文章/字节论文：自进化框架/HarnessDev- Can LLMs Create and Evolve Their Own Agent Harness?.pdf`（41 页）
+- 新建：`summaries/HarnessDev：LLM能否创建并演化自己的Agent Harness.md`
+- 更新：Harness Engineering 主题索引、`Harness六大组件`、`过早完成声明`、`可观测性`、全局来源索引与 manifest
+- 备注：论文区分 Creation 与 Evolution，单独报告反馈集、held-out 泛化、执行 token 成本与跨 executor 迁移；未将可见反馈增益表述为稳定自我进化。
+
 ## [2026-04-11] ingest | Redis核心技术与实战 + Redis源码剖析与实战
 
 - 来源：
@@ -392,3 +400,13 @@
   - 已映射原始文件：39 个；尚未映射原始文件：125 个
   - 概念/实体孤立页面：0 个；仍有 39 个页面缺少具体来源字段，暂不凭空补写证据
 - 备注：原始资料保持只读，后续可按来源主题增量补齐证据映射和孤岛关系
+
+---
+
+## [2026-09-03] maintenance | 文章目录按论文归档
+
+- 类型：路径整理 / manifest 更新
+- 操作：将 5 组可明确配对的 PDF 与对应 Markdown 移入中文命名的论文子目录；“组合式技能路由论文”同时保留中文导读和中文正文。
+- 新目录：`智能体原生记忆系统论文`、`LLM评判与自我改进论文`、`组合式技能路由论文`、`Claude Code设计空间论文`、`生成式技能组合论文`
+- 未移动：没有可明确配对 PDF 的独立 Markdown；已完成归档的 `字节论文：自进化框架`。
+- 影响：仅改变原始资料路径；文件内容、哈希和来源数量不变；`wiki/manifest.json` 已同步。

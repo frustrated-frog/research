@@ -6,7 +6,7 @@ status: active
 tags: [wiki, knowledge-wiki]
 aliases: []
 created: 2026-07-29
-updated: 2026-08-01
+updated: 2026-09-03
 sources: []
 related: []
 valid_from: null
@@ -18,7 +18,7 @@ superseded_by: null
 
 > 原始来源由 wiki/manifest.json 以 SHA-256 哈希追踪；本页只做导航。
 >
-> 最后更新：2026-08-01
+> 最后更新：2026-09-03
 
 ## 来源摘要
 
@@ -30,6 +30,7 @@ superseded_by: null
 | [Pi Agent Harness 源码设计精读](summaries/Pi%20Agent%20Harness%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E7%B2%BE%E8%AF%BB.md) | 来源摘要 | 1 个 | 已建立来源映射 |
 | [来源 - deerflow-book](summaries/deerflow-book-source.md) | 来源摘要 | 26 个 | 已建立来源映射 |
 | [章节与源码路径映射](summaries/%E7%AB%A0%E8%8A%82%E4%B8%8E%E6%BA%90%E7%A0%81%E8%B7%AF%E5%BE%84%E6%98%A0%E5%B0%84.md) | 来源摘要 | 23 个 | 已建立来源映射 |
+| [HarnessDev：LLM能否创建并演化自己的Agent Harness](summaries/HarnessDev%EF%BC%9ALLM%E8%83%BD%E5%90%A6%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%BC%94%E5%8C%96%E8%87%AA%E5%B7%B1%E7%9A%84Agent%20Harness.md) | 来源摘要 | 1 个 PDF | 已建立来源映射 |
 
 ## 综合分析
 
@@ -40,9 +41,8 @@ superseded_by: null
 
 ## 统计
 
-- **来源摘要数**：6
+- **来源摘要数**：7
 - **综合分析数**：2
-- **原始文件数**：164
-- **已映射原始文件数**：39
+- **原始文件数**：165
+- **已映射原始文件数**：40
 - **待摄入原始文件数**：125
-

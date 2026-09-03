@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-01",
+  "generated_at": "2026-09-03",
   "root": "raw/sources",
-  "source_count": 164,
+  "source_count": 165,
   "sources": {
     "raw/sources/LLM-wiki-阿里云/深度解析LLM_Wiki_Obsidian_Wiki_GBrain.md": {
       "source_id": "source-92a41612ae7b",
@@ -1307,7 +1307,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/Are We Ready For An Agent-Native Memory System-with-annotations.pdf": {
+    "raw/sources/文章/智能体原生记忆系统论文/Are We Ready For An Agent-Native Memory System-with-annotations.pdf": {
       "source_id": "source-312790ffb887",
       "content_hash": "sha256:c3219dd0c689c30cc3485737fd2079214b2d929a91b422612bcb9df11e9b227b",
       "size_bytes": 1698843,
@@ -1315,7 +1315,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/Compositional Skill Routing for LLM Agents 中文导读.md": {
+    "raw/sources/文章/组合式技能路由论文/Compositional Skill Routing for LLM Agents 中文导读.md": {
       "source_id": "source-086839a31a9e",
       "content_hash": "sha256:c8e86e436f39c0e39b599c3391ddc924fcdb88bdcd46ff9777fcbf0ac1dfb33a",
       "size_bytes": 8746,
@@ -1323,7 +1323,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/LLM-As-Judge.md": {
+    "raw/sources/文章/LLM评判与自我改进论文/LLM-As-Judge.md": {
       "source_id": "source-a0fc7816dada",
       "content_hash": "sha256:b921ddc9398bf61a563e41b0051f8a6586578f34af02f030a1b19c00af0bfafb",
       "size_bytes": 68696,
@@ -1331,7 +1331,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/LLM-as-judge-原文.pdf": {
+    "raw/sources/文章/LLM评判与自我改进论文/LLM-as-judge-原文.pdf": {
       "source_id": "source-9508c97b4a5b",
       "content_hash": "sha256:07f1a0a8318eb82c547094dfbcec6f2a78fea6bf34e3a0cf02b7efc287073479",
       "size_bytes": 1005671,
@@ -1347,7 +1347,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/agent_native_memory_system_zh.md": {
+    "raw/sources/文章/智能体原生记忆系统论文/agent_native_memory_system_zh.md": {
       "source_id": "source-3a420d86c0b2",
       "content_hash": "sha256:84045cfd63b40808be9061ac50b382d738fdf8d2427ff9598336f0ca0024ee18",
       "size_bytes": 73483,
@@ -1355,7 +1355,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/compositional_skill_routing.md": {
+    "raw/sources/文章/组合式技能路由论文/compositional_skill_routing.md": {
       "source_id": "source-f0d61f88270d",
       "content_hash": "sha256:852ecde325d228337c4ecad356f17b15ccd30f27a8fb3ef5aa87c8fd32174dcc",
       "size_bytes": 54299,
@@ -1363,7 +1363,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/compositional_skill_routing原文.pdf": {
+    "raw/sources/文章/组合式技能路由论文/compositional_skill_routing原文.pdf": {
       "source_id": "source-5462bcfbea68",
       "content_hash": "sha256:b9c67ef361c8fdcfe760e6193e4bc658e374de1744fb5ca3e8c0ef6eaedc264c",
       "size_bytes": 396220,
@@ -1371,7 +1371,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/dive_into_claude_code_中文.md": {
+    "raw/sources/文章/Claude Code设计空间论文/dive_into_claude_code_中文.md": {
       "source_id": "source-12efc9c90f08",
       "content_hash": "sha256:ef0c7aab3312eda91237185f9b635472e4be4f2937414b5a77478c8b8cca0114",
       "size_bytes": 95855,
@@ -1379,7 +1379,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/dive_into_claude_code原文.pdf": {
+    "raw/sources/文章/Claude Code设计空间论文/dive_into_claude_code原文.pdf": {
       "source_id": "source-13ed05ea4ea6",
       "content_hash": "sha256:a4c3c92070557d693125850ab40d8249dbb3967988c919e95a6f46caa4ab62b9",
       "size_bytes": 1390792,
@@ -1403,7 +1403,7 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/面向大语言模型智能体的生成式技能组合.md": {
+    "raw/sources/文章/生成式技能组合论文/面向大语言模型智能体的生成式技能组合.md": {
       "source_id": "source-c6372c7dcc42",
       "content_hash": "sha256:e175d65ceeb9db6e113dfb619365c10bfb4f4b6c69647aad5af0fcc5eae61e0c",
       "size_bytes": 32959,
@@ -1411,7 +1411,20 @@
       "status": "unchanged",
       "pages": []
     },
-    "raw/sources/文章/面向大语言模型智能体的生成式技能组合.pdf": {
+    "raw/sources/文章/字节论文：自进化框架/HarnessDev- Can LLMs Create and Evolve Their Own Agent Harness?.pdf": {
+      "source_id": "source-harnessdev-20260902",
+      "content_hash": "sha256:1231454f0ae5ccffdb3d031dc8f42eae0cbbaeb61dcd25dddb1855074697dfc0",
+      "size_bytes": 1800192,
+      "modified_at": "2026-09-02T23:33:00+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/harnessdev-20260902",
+        "concept/harness-engineering/Harness六大组件",
+        "concept/harness-engineering/过早完成声明",
+        "concept/harness-engineering/可观测性"
+      ]
+    },
+    "raw/sources/文章/生成式技能组合论文/面向大语言模型智能体的生成式技能组合.pdf": {
       "source_id": "source-52a986b5da08",
       "content_hash": "sha256:cec80b43669b84df2ed4162a954f58fa0269e69127e437548b855aa1d15b562c",
       "size_bytes": 1074946,

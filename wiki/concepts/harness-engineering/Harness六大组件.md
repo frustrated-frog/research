@@ -6,7 +6,7 @@ status: active
 tags: [Harness, AI Agent, 文件系统, 沙箱, 记忆, Web Search, MCP, 上下文工程, 编排, Hooks]
 aliases: []
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-09-03
 related: [上下文工程, 自我改进循环]
 valid_from: null
 valid_to: null
@@ -15,6 +15,11 @@ sources:
   - source_id: source-harness-six-components
     path: raw/sources/harness-engineering/Harness六大组件深度解读.md
     locator: "全文"
+    claim_type: extracted
+    confidence: high
+  - source_id: source-harnessdev-20260902
+    path: raw/sources/文章/字节论文：自进化框架/HarnessDev- Can LLMs Create and Evolve Their Own Agent Harness?.pdf
+    locator: "第 4–7 页、附录 C"
     claim_type: extracted
     confidence: high
 ---
@@ -157,3 +162,4 @@ System Prompt 在 Harness 中扮演四个角色：
 
 - [[concepts/hermes-agent/自我改进循环|自我改进循环]]
 - [[concepts/harness-engineering/Harness驾驭层|Harness驾驭层]]
+- [[summaries/HarnessDev：LLM能否创建并演化自己的Agent Harness]]：以 Creation 基准验证执行、工具、上下文、状态、生命周期和验证是可单独评测的控制职责；其 Code harness 结果也显示状态/记忆最容易停留在未进入执行主路径的“声明层”。

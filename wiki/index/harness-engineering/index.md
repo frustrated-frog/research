@@ -6,7 +6,7 @@ status: active
 tags: [harness, agent, AI-engineering]
 aliases: []
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-09-03
 sources: []
 related: []
 valid_from: null
@@ -50,6 +50,7 @@ Harness Engineering 是让 AI coding agent 从不可预测变得可信赖的系�
 | 页面 | 描述 |
 |------|------|
 | [[summaries/Harness_Engineering_完整课程]] | 完整12讲课程摘要 |
+| [[summaries/HarnessDev：LLM能否创建并演化自己的Agent Harness]] | 对从弱种子创建、反馈驱动演化、未见集泛化和跨 executor 迁移的实证评测 |
 
 ## 五分钟理解 Harness Engineering
 
