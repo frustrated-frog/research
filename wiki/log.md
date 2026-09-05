@@ -410,3 +410,21 @@
 - 新目录：`智能体原生记忆系统论文`、`LLM评判与自我改进论文`、`组合式技能路由论文`、`Claude Code设计空间论文`、`生成式技能组合论文`
 - 未移动：没有可明确配对 PDF 的独立 Markdown；已完成归档的 `字节论文：自进化框架`。
 - 影响：仅改变原始资料路径；文件内容、哈希和来源数量不变；`wiki/manifest.json` 已同步。
+
+---
+
+## [2026-09-04] ingest | Runtime-Independent Persistent Agents
+
+- 类型：source / 论文解读
+- 来源：raw/sources/文章/运行时独立持久智能体论文/Runtime-Independent Persistent Agents.pdf
+- 操作：
+  - 逐页提取并核对架构图、授权迁移协议、provider 表与机制证据表。
+  - 新建中文论文解读，明确标注原文事实、作者解释和解读推断；将系统连续性与行为身份保真度分开叙述。
+  - 将 PDF 与解读文档归入中文目录“运行时独立持久智能体论文”。
+  - 新建来源摘要，并以来源证据更新“上下文连续性”“会话交接”和 Harness Engineering 索引。
+- 完成项：
+  - raw/sources/文章/运行时独立持久智能体论文/运行时独立持久智能体论文解读.md
+  - wiki/summaries/运行时独立持久智能体.md
+  - wiki/concepts/harness-engineering/上下文连续性.md
+  - wiki/concepts/harness-engineering/会话交接.md
+  - wiki/manifest.json、wiki/All-Sources.md、wiki/index.md、wiki/index/harness-engineering/index.md

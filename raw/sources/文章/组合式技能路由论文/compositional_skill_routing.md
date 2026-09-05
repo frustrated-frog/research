@@ -1,7 +1,7 @@
 # LLM Agent 的组合式技能路由：分解、检索与组合
 
 **作者：** Xueping Gao  
-**机构：** Alibaba Cloud，中国杭州  
+**机构：** Alibaba Cloud，中国杭州 
 **邮箱：** hellogxp@gmail.com
 
 ---

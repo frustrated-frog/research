@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03",
+  "generated_at": "2026-09-04",
   "root": "raw/sources",
-  "source_count": 165,
+  "source_count": 166,
   "sources": {
     "raw/sources/LLM-wiki-阿里云/深度解析LLM_Wiki_Obsidian_Wiki_GBrain.md": {
       "source_id": "source-92a41612ae7b",
@@ -1431,6 +1431,18 @@
       "modified_at": "2026-07-29T22:31:22+08:00",
       "status": "unchanged",
       "pages": []
+    },
+    "raw/sources/文章/运行时独立持久智能体论文/Runtime-Independent Persistent Agents.pdf": {
+      "source_id": "source-runtime-independent-persistent-agents",
+      "content_hash": "sha256:dfde4d49bf2a80333355a01baff62fc9caebb1a1ae3f89bed72f1b1f65daf9b9",
+      "size_bytes": 210440,
+      "modified_at": "2026-09-04T20:33:46+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/runtime-independent-persistent-agents",
+        "concept/harness-engineering/上下文连续性",
+        "concept/harness-engineering/会话交接"
+      ]
     }
   }
 }
