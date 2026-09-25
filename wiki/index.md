@@ -6,7 +6,7 @@ status: active
 tags: [wiki, knowledge-wiki]
 aliases: []
 created: 2026-07-29
-updated: 2026-09-04
+updated: 2026-09-13
 sources: []
 related: []
 valid_from: null
@@ -32,6 +32,7 @@ superseded_by: null
 | harness-engineering | 10 | 4 | [index.md](index/harness-engineering/index.md) |
 | hermes-agent | 4 | 4 | [index.md](index/hermes-agent/index.md) |
 | pi-agent-harness | 0 | 0 | [index.md](index/pi-agent-harness/index.md) |
+| 结构感知检索 | 1 | 0 | [index.md](index/结构感知检索/index.md) |
 
 
 ---
@@ -57,12 +58,12 @@ superseded_by: null
 
 ## 📊 统计
 
-- **主题总数**：6
-- **概念总数**：30
+- **主题总数**：7
+- **概念总数**：31
 - **实体总数**：21
-- **来源摘要**：8
+- **来源摘要**：10
 - **综合分析**：2
 
 ---
 
-_最后更新：2026-09-04_
+_最后更新：2026-09-13_

@@ -6,7 +6,7 @@ status: active
 tags: [wiki, knowledge-wiki]
 aliases: []
 created: 2026-07-29
-updated: 2026-08-01
+updated: 2026-09-07
 sources: []
 related: []
 valid_from: null
@@ -18,7 +18,7 @@ superseded_by: null
 
 > 自动维护的派生导航；页面正文和原始来源才是知识内容的权威。
 >
-> 最后更新：2026-08-01
+> 最后更新：2026-09-07
 
 ## 全部索引
 
@@ -54,6 +54,7 @@ superseded_by: null
 | [Hermes Agent 技能系统](concepts/hermes-agent/%E6%8A%80%E8%83%BD%E7%B3%BB%E7%BB%9F.md) | hermes-agent | 概念 | 0 | 0 |
 | [Hermes Agent 自我改进循环](concepts/hermes-agent/%E8%87%AA%E6%88%91%E6%94%B9%E8%BF%9B%E5%BE%AA%E7%8E%AF.md) | hermes-agent | 概念 | 0 | 0 |
 | [Hermes Agent 记忆系统](concepts/hermes-agent/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F.md) | hermes-agent | 概念 | 0 | 0 |
+| [目录结构增强检索](concepts/结构感知检索/目录结构增强检索.md) | 结构感知检索 | 概念 | 1 | 2 |
 | [QueryEngine](entities/claude-code/queryengine%E5%AF%B9%E8%AF%9D%E5%BC%95%E6%93%8E.md) | claude-code | 实体 | 0 | 0 |
 | [Skills 技能扩展](entities/claude-code/Skills%E6%8A%80%E8%83%BD%E6%89%A9%E5%B1%95.md) | claude-code | 实体 | 0 | 1 |
 | [Sub-Agent 机制](entities/claude-code/Sub-Agent%E6%9C%BA%E5%88%B6.md) | claude-code | 实体 | 0 | 1 |
@@ -78,9 +79,8 @@ superseded_by: null
 
 ## 统计
 
-- **概念总数**：30
+- **概念总数**：31
 - **实体总数**：21
 - **Wiki 页面总数**：51
 - **有入链页面**：34
 - **孤岛页面**：18
-

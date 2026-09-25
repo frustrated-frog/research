@@ -1,0 +1,1 @@
+/Users/machengqian/code/obsidian-signboard/main.js

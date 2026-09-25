@@ -428,3 +428,38 @@
   - wiki/concepts/harness-engineering/上下文连续性.md
   - wiki/concepts/harness-engineering/会话交接.md
   - wiki/manifest.json、wiki/All-Sources.md、wiki/index.md、wiki/index/harness-engineering/index.md
+
+---
+
+## [2026-09-07] ingest | STAIR：结构感知信息检索
+
+- 类型：source / 论文解读
+- 来源：raw/sources/文章/结构感知信息检索论文/STructure Aware Information Retriever.pdf
+- 操作：
+  - 逐页核对任务形式化、SearchTome 数据构造、训练与基线设置、表 4 指标、图 2 至图 4 和局限。
+  - 新建中文论文解读，分离原文事实、作者解释、解读推断和未决问题；明确“非法叶节点输出”不等于最终答案事实幻觉。
+  - 将 PDF 与解读归入中文目录“结构感知信息检索论文”。
+  - 新建“结构感知检索”主题入口、来源摘要和概念页，并更新全局索引与 manifest。
+- 完成项：
+  - raw/sources/文章/结构感知信息检索论文/结构感知信息检索论文解读.md
+  - wiki/summaries/结构感知信息检索（STAIR）.md
+  - wiki/concepts/结构感知检索/目录结构增强检索.md
+  - wiki/index/结构感知检索/index.md
+  - wiki/manifest.json、wiki/All-Sources.md、wiki/All-Concepts.md、wiki/index.md
+
+---
+
+## [2026-09-13] ingest | Procedural Graphs：自演化执行图
+
+- 类型：source / 论文解读
+- 来源：raw/sources/文章/自演化执行图论文/Self-Evolving Execution Structures for LLM Agents.pdf
+- 操作：
+  - 逐页读取正文与实验附录，核对程序图表示、局部 guidance、自演化算法、表 1 至表 3、表 11 和候选图回滚逻辑。
+  - 新建中文论文解读，区分论文事实、作者解释、工程推断和未决问题；特别说明软提示、验证集规模、LLM judge 与 token 开销的边界。
+  - 将 PDF 与解读文档归入中文目录“自演化执行图论文”。
+  - 新建来源摘要，并用来源证据补充 Hermes 自我改进循环和 Harness Engineering 来源索引。
+- 完成项：
+  - raw/sources/文章/自演化执行图论文/自演化执行图论文解读.md
+  - wiki/summaries/自演化执行图（Procedural Graphs）.md
+  - wiki/concepts/hermes-agent/自我改进循环.md
+  - wiki/manifest.json、wiki/All-Sources.md、wiki/index.md、wiki/index/harness-engineering/index.md

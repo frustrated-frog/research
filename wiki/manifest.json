@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-04",
+  "generated_at": "2026-09-13",
   "root": "raw/sources",
-  "source_count": 166,
+  "source_count": 168,
   "sources": {
     "raw/sources/LLM-wiki-阿里云/深度解析LLM_Wiki_Obsidian_Wiki_GBrain.md": {
       "source_id": "source-92a41612ae7b",
@@ -1442,6 +1442,28 @@
         "source/runtime-independent-persistent-agents",
         "concept/harness-engineering/上下文连续性",
         "concept/harness-engineering/会话交接"
+      ]
+    },
+    "raw/sources/文章/结构感知信息检索论文/STructure Aware Information Retriever.pdf": {
+      "source_id": "source-stair-structure-aware-information-retriever",
+      "content_hash": "sha256:3bd184d873154b105b60d16c07f6f6ec3b800b582d4b50ada034ab85245dda8b",
+      "size_bytes": 4339869,
+      "modified_at": "2026-09-07T12:15:18+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/stair-structure-aware-information-retriever",
+        "concept/结构感知检索/目录结构增强检索"
+      ]
+    },
+    "raw/sources/文章/自演化执行图论文/Self-Evolving Execution Structures for LLM Agents.pdf": {
+      "source_id": "source-procedural-graphs-self-evolving-execution-structures",
+      "content_hash": "sha256:90ffc33b32c009846a183edab09b521cde4d5342ccbfafa71cd00bd2186ddb9a",
+      "size_bytes": 5653711,
+      "modified_at": "2026-09-13T10:04:08+08:00",
+      "status": "unchanged",
+      "pages": [
+        "source/procedural-graphs-self-evolving-execution-structures",
+        "concept/hermes-agent/自我改进循环"
       ]
     }
   }

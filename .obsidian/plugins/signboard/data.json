@@ -1,0 +1,1002 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "openOnStartup": false,
+    "queueSize": 20,
+    "longUnreadDays": 30,
+    "healthStaleDays": 180,
+    "readableExtensions": [
+      "md",
+      "pdf"
+    ],
+    "excludedPathPrefixes": [],
+    "createdDateKeys": [
+      "created",
+      "created_at",
+      "date-created"
+    ],
+    "firstRunExistingFiles": "read",
+    "defaultResultMode": "table",
+    "motionEnabled": true
+  },
+  "readStateByPath": {
+    "AGENTS.md": {
+      "lastReadAt": 1785335482838,
+      "lastSeenMtime": 1785335482838
+    },
+    "raw/sources/文章/人人都在谈论LLM但没人解释它们底层到底如何工作.md": {
+      "lastReadAt": 1785335482874,
+      "lastSeenMtime": 1785335482874
+    },
+    "raw/sources/文章/生成式技能组合论文/面向大语言模型智能体的生成式技能组合.md": {
+      "lastReadAt": 1785335482874,
+      "lastSeenMtime": 1785335482874
+    },
+    "raw/sources/文章/生成式技能组合论文/面向大语言模型智能体的生成式技能组合.pdf": {
+      "lastReadAt": 1785335482876,
+      "lastSeenMtime": 1785335482876
+    },
+    "raw/sources/文章/运行时独立持久智能体论文/运行时独立持久智能体论文解读.md": {
+      "lastReadAt": 1789986876941,
+      "lastSeenMtime": 1788597544850
+    },
+    "raw/sources/文章/运行时独立持久智能体论文/Runtime-Independent Persistent Agents.pdf": {
+      "lastReadAt": 1789053603231,
+      "lastSeenMtime": 1788525226732
+    },
+    "raw/sources/文章/智能体原生记忆系统论文/agent_native_memory_system_zh.md": {
+      "lastReadAt": 1789717783169,
+      "lastSeenMtime": 1785335482870
+    },
+    "raw/sources/文章/智能体原生记忆系统论文/Are We Ready For An Agent-Native Memory System-with-annotations.pdf": {
+      "lastReadAt": 1789717781563,
+      "lastSeenMtime": 1785335482868
+    },
+    "raw/sources/文章/字节论文：自进化框架/HarnessDev 论文技术解读.md": {
+      "lastReadAt": 1789986889256,
+      "lastSeenMtime": 1788403927126
+    },
+    "raw/sources/文章/字节论文：自进化框架/HarnessDev- Can LLMs Create and Evolve Their Own Agent Harness?.pdf": {
+      "lastReadAt": 1789986897024,
+      "lastSeenMtime": 1788363233105
+    },
+    "raw/sources/文章/组合式技能路由论文/Compositional Skill Routing for LLM Agents 中文导读.md": {
+      "lastReadAt": 1785335482868,
+      "lastSeenMtime": 1785335482868
+    },
+    "raw/sources/文章/组合式技能路由论文/compositional_skill_routing.md": {
+      "lastReadAt": 1788525310214,
+      "lastSeenMtime": 1788525310214
+    },
+    "raw/sources/文章/组合式技能路由论文/compositional_skill_routing原文.pdf": {
+      "lastReadAt": 1785335482871,
+      "lastSeenMtime": 1785335482871
+    },
+    "raw/sources/文章/Agent Harness Engineering A Survey.md": {
+      "lastReadAt": 1790129089296,
+      "lastSeenMtime": 1785335482865
+    },
+    "raw/sources/文章/Claude Code设计空间论文/dive_into_claude_code_中文.md": {
+      "lastReadAt": 1785335482872,
+      "lastSeenMtime": 1785335482872
+    },
+    "raw/sources/文章/Claude Code设计空间论文/dive_into_claude_code原文.pdf": {
+      "lastReadAt": 1785335482874,
+      "lastSeenMtime": 1785335482874
+    },
+    "raw/sources/文章/LLM评判与自我改进论文/LLM-as-judge-原文.pdf": {
+      "lastReadAt": 1785335482870,
+      "lastSeenMtime": 1785335482870
+    },
+    "raw/sources/文章/LLM评判与自我改进论文/LLM-As-Judge.md": {
+      "lastReadAt": 1785335482869,
+      "lastSeenMtime": 1785335482869
+    },
+    "raw/sources/文章/Loop Engineering - Addy Osmani.md": {
+      "lastReadAt": 1789716473041,
+      "lastSeenMtime": 1785335482870
+    },
+    "raw/sources/文章/peter-steinberger-openclaw-loop-engineering-zh.md": {
+      "lastReadAt": 1785335482874,
+      "lastSeenMtime": 1785335482874
+    },
+    "raw/sources/agentscope-java/感悟.md": {
+      "lastReadAt": 1785335482839,
+      "lastSeenMtime": 1785335482839
+    },
+    "raw/sources/agentscope-java/问题.md": {
+      "lastReadAt": 1785335482840,
+      "lastSeenMtime": 1785335482840
+    },
+    "raw/sources/agentscope-java/harness-agent-deep-dive.md": {
+      "lastReadAt": 1785335482839,
+      "lastSeenMtime": 1785335482839
+    },
+    "raw/sources/claude-code/学习感悟.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/01-项目概览与核心定位.md": {
+      "lastReadAt": 1785335482841,
+      "lastSeenMtime": 1785335482841
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/02-环境配置与运行指南.md": {
+      "lastReadAt": 1785335482841,
+      "lastSeenMtime": 1785335482841
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/03-启动流程与入口点解析.md": {
+      "lastReadAt": 1785335482842,
+      "lastSeenMtime": 1785335482842
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/04-核心架构总览.md": {
+      "lastReadAt": 1785335482842,
+      "lastSeenMtime": 1785335482842
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/05-Agentic 对话循环机制.md": {
+      "lastReadAt": 1785335482842,
+      "lastSeenMtime": 1785335482842
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/06-流式响应与事件处理.md": {
+      "lastReadAt": 1785335482843,
+      "lastSeenMtime": 1785335482843
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/07-多轮对话与会话管理.md": {
+      "lastReadAt": 1785335482843,
+      "lastSeenMtime": 1785335482843
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/08-工具架构与注册机制.md": {
+      "lastReadAt": 1785335482843,
+      "lastSeenMtime": 1785335482843
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/09-文件操作工具详解.md": {
+      "lastReadAt": 1785335482843,
+      "lastSeenMtime": 1785335482843
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/10-Shell执行与命令工具.md": {
+      "lastReadAt": 1785335482843,
+      "lastSeenMtime": 1785335482843
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/11-搜索与导航工具.md": {
+      "lastReadAt": 1785335482844,
+      "lastSeenMtime": 1785335482844
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/12-任务管理工具.md": {
+      "lastReadAt": 1785335482844,
+      "lastSeenMtime": 1785335482844
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/13-权限模型与审批流程.md": {
+      "lastReadAt": 1785335482844,
+      "lastSeenMtime": 1785335482844
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/14-沙箱隔离机制.md": {
+      "lastReadAt": 1785335482844,
+      "lastSeenMtime": 1785335482844
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/15-Plan-Mode执行模式.md": {
+      "lastReadAt": 1785335482844,
+      "lastSeenMtime": 1785335482844
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/16-自动模式与安全策略.md": {
+      "lastReadAt": 1785335482845,
+      "lastSeenMtime": 1785335482845
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/17-系统提示构建.md": {
+      "lastReadAt": 1785335482845,
+      "lastSeenMtime": 1785335482845
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/18-项目内存与知识管理.md": {
+      "lastReadAt": 1785335482845,
+      "lastSeenMtime": 1785335482845
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/19-上下文压缩策略.md": {
+      "lastReadAt": 1785335482846,
+      "lastSeenMtime": 1785335482846
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/20-Token预算管理.md": {
+      "lastReadAt": 1785335482846,
+      "lastSeenMtime": 1785335482846
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/21-Sub-Agent机制.md": {
+      "lastReadAt": 1785335482847,
+      "lastSeenMtime": 1785335482847
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/22-Worktree隔离环境.md": {
+      "lastReadAt": 1785335482847,
+      "lastSeenMtime": 1785335482847
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/23-协调器与Swarm模式.md": {
+      "lastReadAt": 1785335482847,
+      "lastSeenMtime": 1785335482847
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/24-MCP协议集成.md": {
+      "lastReadAt": 1785335482847,
+      "lastSeenMtime": 1785335482847
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/25-Hooks钩子系统.md": {
+      "lastReadAt": 1785335482847,
+      "lastSeenMtime": 1785335482847
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/26-Skills技能扩展.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/27-自定义Agent开发.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/claude-code/claude-code-deep-dive-main/README.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/clawteam/ClawTeam通用Agent协作设计思想精读.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/codex/我与codex的对话问答.md": {
+      "lastReadAt": 1786820156276,
+      "lastSeenMtime": 1786820156276
+    },
+    "raw/sources/codex/Codex 实体查询表.md": {
+      "lastReadAt": 1785335482848,
+      "lastSeenMtime": 1785335482848
+    },
+    "raw/sources/codex/codex-execution-chain-and-design.md": {
+      "lastReadAt": 1786820156275,
+      "lastSeenMtime": 1786820156275
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/01-what-is-deerflow.md": {
+      "lastReadAt": 1789721336223,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/02-repo-overview.md": {
+      "lastReadAt": 1785335482850,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/03-quick-start.md": {
+      "lastReadAt": 1785335482850,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/04-langgraph-engine.md": {
+      "lastReadAt": 1789721339964,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/05-lead-agent.md": {
+      "lastReadAt": 1785335482850,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/06-middleware-pipeline.md": {
+      "lastReadAt": 1789719466082,
+      "lastSeenMtime": 1785335482850
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/07-context-engineering.md": {
+      "lastReadAt": 1789719650450,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/08-subagent-overview.md": {
+      "lastReadAt": 1785335482851,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/09-subagent-executor.md": {
+      "lastReadAt": 1785335482851,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/10-orchestration.md": {
+      "lastReadAt": 1785335482851,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/11-memory-architecture.md": {
+      "lastReadAt": 1785335482851,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/12-memory-pipeline.md": {
+      "lastReadAt": 1785335482851,
+      "lastSeenMtime": 1785335482851
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/13-sandbox-abstraction.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/14-sandbox-implementations.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/15-builtin-tools.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/16-mcp-extensions.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/17-skills-system.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/18-custom-skills.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/19-fastapi-gateway.md": {
+      "lastReadAt": 1785335482852,
+      "lastSeenMtime": 1785335482852
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/20-im-channels.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/21-config-system.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/22-model-config.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/23-deployment.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-a-reading-path.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-b-config-reference.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/chapters/appendix-c-glossary.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/contents.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/deerflow-book-main/index.md": {
+      "lastReadAt": 1785335482853,
+      "lastSeenMtime": 1785335482853
+    },
+    "raw/sources/deer-flow/DeerFlow中的Harness-Engineering-实践详解.md": {
+      "lastReadAt": 1789718489129,
+      "lastSeenMtime": 1785335482849
+    },
+    "raw/sources/gorse/Gorse开源推荐引擎深度技术讲解.md": {
+      "lastReadAt": 1786820156277,
+      "lastSeenMtime": 1786820156277
+    },
+    "raw/sources/gorse/Gorse推荐全链路技术解析（v0.5.11）.md": {
+      "lastReadAt": 1786820156277,
+      "lastSeenMtime": 1786820156277
+    },
+    "raw/sources/harness-engineering/Agent Harness Engineering：A Survey.md": {
+      "lastReadAt": 1785335482855,
+      "lastSeenMtime": 1785335482855
+    },
+    "raw/sources/harness-engineering/Agent-Harness工程化权威指南.md": {
+      "lastReadAt": 1785335482855,
+      "lastSeenMtime": 1785335482855
+    },
+    "raw/sources/harness-engineering/Harness_Engineering_完整课程.md": {
+      "lastReadAt": 1785335482855,
+      "lastSeenMtime": 1785335482855
+    },
+    "raw/sources/harness-engineering/Harness六大组件深度解读.md": {
+      "lastReadAt": 1785335482856,
+      "lastSeenMtime": 1785335482856
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-01-why-capable-agents-still-fail.md": {
+      "lastReadAt": 1785335482856,
+      "lastSeenMtime": 1785335482856
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-02-what-a-harness-actually-is.md": {
+      "lastReadAt": 1785335482856,
+      "lastSeenMtime": 1785335482856
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-03-why-the-repository-must-become-the-system-of-record.md": {
+      "lastReadAt": 1785335482856,
+      "lastSeenMtime": 1785335482856
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-04-why-one-giant-instruction-file-fails.md": {
+      "lastReadAt": 1785335482856,
+      "lastSeenMtime": 1785335482856
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-05-why-long-running-tasks-lose-continuity.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-06-why-initialization-needs-its-own-phase.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-07-why-agents-overreach-and-under-finish.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-08-why-feature-lists-are-harness-primitives.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-09-why-agents-declare-victory-too-early.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-10-why-end-to-end-testing-changes-results.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-11-why-observability-belongs-inside-the-harness.md": {
+      "lastReadAt": 1785335482857,
+      "lastSeenMtime": 1785335482857
+    },
+    "raw/sources/harness-engineering/learn-harness-engineering-github/lecture-12-why-every-session-must-leave-a-clean-state.md": {
+      "lastReadAt": 1785335482858,
+      "lastSeenMtime": 1785335482858
+    },
+    "raw/sources/harness-engineering/managed-agents-scaling.md": {
+      "lastReadAt": 1785335482858,
+      "lastSeenMtime": 1785335482858
+    },
+    "raw/sources/hermes-agent-docs/hermes-agent自我改进循环源码解读.md": {
+      "lastReadAt": 1785335482858,
+      "lastSeenMtime": 1785335482858
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/20260506-20260509分支改动复盘.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260506-A2UI扩展化与部署基础.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260507-A2UI生成优化.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260508-全量流式与日志能力.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支复盘/20260509-A2UI编辑局部Patch.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/分支与上游同步约定.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/00-项目规划/改造目标.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/本地持久化存储说明.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第2步-吃透主循环.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第3步-吃透工具注册与执行链.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/第4步-吃透模型提供方与传输链.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/熟悉与二次开发实战指南.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/系统提示词.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/源码熟悉顺序.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/01-源码学习/pyproject-toml中文详解.md": {
+      "lastReadAt": 1785335482859,
+      "lastSeenMtime": 1785335482859
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/Gemini登录提供方实现计划.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/JD公司大模型代码走查手册.md": {
+      "lastReadAt": 1785335482860,
+      "lastSeenMtime": 1785335482860
+    },
+    "raw/sources/hermes-agent-docs/plans/02-模型接入/JD公司大模型迁移技术设计与复盘.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/A2UI能力测试用例.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/A2UI能力扩展化接入实现说明.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/api-chat-A2UI对话统一Checkpoint回退接口文档.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/api-chat接入Relay-Deco-MCP实现说明.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/Deco MCP使用手册.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/jd-dev-20260513-A2UI当前待提交代码走查结果.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/hermes-agent-docs/plans/03-A2UI能力/jd-dev-20260513-A2UI当前待提交代码走查手册.md": {
+      "lastReadAt": 1785335482861,
+      "lastSeenMtime": 1785335482861
+    },
+    "raw/sources/hermes-agent-docs/plans/04-部署联调/公司云端部署指南.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/hermes-agent-docs/plans/04-部署联调/A2UI前端本地联调启动指南.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/hermes-agent-docs/plans/目录索引.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/hermes-webui/Hermes_WebUI_深度技术原理文档.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/LLM-wiki-阿里云/深度解析LLM_Wiki_Obsidian_Wiki_GBrain.md": {
+      "lastReadAt": 1785335482838,
+      "lastSeenMtime": 1785335482838
+    },
+    "raw/sources/open-tag/open-tag-智能体编排实现详解.md": {
+      "lastReadAt": 1785938494288,
+      "lastSeenMtime": 1785938494288
+    },
+    "raw/sources/OpenAgents-Workspace-多Agent通信与记忆系统说明.md": {
+      "lastReadAt": 1785335482838,
+      "lastSeenMtime": 1785335482838
+    },
+    "raw/sources/OpenAI_Agents_Python_SDK/OpenAI_Agents_Python_SDK_源码深度解析.md": {
+      "lastReadAt": 1785335482838,
+      "lastSeenMtime": 1785335482838
+    },
+    "raw/sources/openclaw经验总结/我与 Codex 的对话问答.md": {
+      "lastReadAt": 1785335482863,
+      "lastSeenMtime": 1785335482863
+    },
+    "raw/sources/openclaw经验总结/openclaw_company_gateway_config_explained.md": {
+      "lastReadAt": 1785335482863,
+      "lastSeenMtime": 1785335482863
+    },
+    "raw/sources/openclaw经验总结/openclaw-skills加载机制与实战总结.md": {
+      "lastReadAt": 1785335482863,
+      "lastSeenMtime": 1785335482863
+    },
+    "raw/sources/openclaw经验总结/OpenClaw的SubAgent经验总结.md": {
+      "lastReadAt": 1785335482862,
+      "lastSeenMtime": 1785335482862
+    },
+    "raw/sources/other/沙箱机制说明文档.md": {
+      "lastReadAt": 1785335482864,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/other/云端Agent基础设施的两条经验-中文翻译.md": {
+      "lastReadAt": 1785335482864,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/other/OpenClaw与Hermes全面对比.md": {
+      "lastReadAt": 1785335482864,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/oxygent/问题.md": {
+      "lastReadAt": 1785335482864,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/oxygent/source-code-deep-dive.md": {
+      "lastReadAt": 1785335482864,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/pairec/PAI-Rec深度技术讲解.md": {
+      "lastReadAt": 1786820156277,
+      "lastSeenMtime": 1786820156277
+    },
+    "raw/sources/PI-MONO/PI-Agent-设计说明.md": {
+      "lastReadAt": 1785335482839,
+      "lastSeenMtime": 1785335482839
+    },
+    "raw/sources/PI-MONO/PI-MONO-项目完整技术文档.md": {
+      "lastReadAt": 1785335482839,
+      "lastSeenMtime": 1785335482839
+    },
+    "raw/sources/pi/Pi Agent Harness源码设计精读.md": {
+      "lastReadAt": 1789718261611,
+      "lastSeenMtime": 1785335482864
+    },
+    "raw/sources/pi/Skill体系设计.md": {
+      "lastReadAt": 1786820156278,
+      "lastSeenMtime": 1786820156278
+    },
+    "raw/sources/ragent/Ragent企业级Agentic RAG源码精读.md": {
+      "lastReadAt": 1785335482865,
+      "lastSeenMtime": 1785335482865
+    },
+    "raw/sources/README.md": {
+      "lastReadAt": 1785335482839,
+      "lastSeenMtime": 1785335482839
+    },
+    "raw/sources/smolagents/SMOLAGENTS_深度讲解文档.md": {
+      "lastReadAt": 1785335482865,
+      "lastSeenMtime": 1785335482865
+    },
+    "raw/sources/Spring AI alibaba/Skill 体系设计.md": {
+      "lastReadAt": 1786820156275,
+      "lastSeenMtime": 1786820156275
+    },
+    "raw/sources/tencentdb-agent-memory/TencentDB-Agent-Memory项目深度讲解.md": {
+      "lastReadAt": 1785335482865,
+      "lastSeenMtime": 1785335482865
+    },
+    "self-summary/Claude Code：12 个可复用的 Agentic Harness 设计模式.md": {
+      "lastReadAt": 1785335482877,
+      "lastSeenMtime": 1785335482877
+    },
+    "self-summary/ClaudeCode与DeerFlow设计思想精读.md": {
+      "lastReadAt": 1785335482877,
+      "lastSeenMtime": 1785335482877
+    },
+    "self-summary/Harness Engineering 总结.md": {
+      "lastReadAt": 1785335482877,
+      "lastSeenMtime": 1785335482877
+    },
+    "wiki/All-Concepts.md": {
+      "lastReadAt": 1785597476524,
+      "lastSeenMtime": 1785597476524
+    },
+    "wiki/All-Sources.md": {
+      "lastReadAt": 1788526012499,
+      "lastSeenMtime": 1788526012499
+    },
+    "wiki/concepts/claude-code/工具架构与注册机制.md": {
+      "lastReadAt": 1785597622385,
+      "lastSeenMtime": 1785597622385
+    },
+    "wiki/concepts/claude-code/流式响应与事件处理.md": {
+      "lastReadAt": 1785597289804,
+      "lastSeenMtime": 1785597289804
+    },
+    "wiki/concepts/claude-code/权限模型与审批流程.md": {
+      "lastReadAt": 1785597622385,
+      "lastSeenMtime": 1785597622385
+    },
+    "wiki/concepts/claude-code/沙箱隔离机制.md": {
+      "lastReadAt": 1785597659775,
+      "lastSeenMtime": 1785597659775
+    },
+    "wiki/concepts/claude-code/上下文压缩策略.md": {
+      "lastReadAt": 1785597289802,
+      "lastSeenMtime": 1785597289802
+    },
+    "wiki/concepts/claude-code/agentic对话循环机制.md": {
+      "lastReadAt": 1785597622385,
+      "lastSeenMtime": 1785597622385
+    },
+    "wiki/concepts/deerflow-book/记忆三层架构.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/渐进式加载.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/上下文隔离.md": {
+      "lastReadAt": 1785597359366,
+      "lastSeenMtime": 1785597359366
+    },
+    "wiki/concepts/deerflow-book/虚拟路径.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/延迟初始化.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/长时程Agent.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/置信度阈值.md": {
+      "lastReadAt": 1785597359367,
+      "lastSeenMtime": 1785597359367
+    },
+    "wiki/concepts/deerflow-book/Harness与Framework.md": {
+      "lastReadAt": 1785597359366,
+      "lastSeenMtime": 1785597359366
+    },
+    "wiki/concepts/deerflow-book/ReAct循环.md": {
+      "lastReadAt": 1785597359366,
+      "lastSeenMtime": 1785597359366
+    },
+    "wiki/concepts/harness-engineering/仓库即事实来源.md": {
+      "lastReadAt": 1785597289895,
+      "lastSeenMtime": 1785597289895
+    },
+    "wiki/concepts/harness-engineering/初始化阶段.md": {
+      "lastReadAt": 1785597289896,
+      "lastSeenMtime": 1785597289896
+    },
+    "wiki/concepts/harness-engineering/端到端测试.md": {
+      "lastReadAt": 1785597289897,
+      "lastSeenMtime": 1785597289897
+    },
+    "wiki/concepts/harness-engineering/功能清单.md": {
+      "lastReadAt": 1785597289896,
+      "lastSeenMtime": 1785597289896
+    },
+    "wiki/concepts/harness-engineering/过早完成声明.md": {
+      "lastReadAt": 1788403504873,
+      "lastSeenMtime": 1788403504873
+    },
+    "wiki/concepts/harness-engineering/会话交接.md": {
+      "lastReadAt": 1788526012498,
+      "lastSeenMtime": 1788526012498
+    },
+    "wiki/concepts/harness-engineering/可观测性.md": {
+      "lastReadAt": 1788403504873,
+      "lastSeenMtime": 1788403504873
+    },
+    "wiki/concepts/harness-engineering/任务边界与WIP限制.md": {
+      "lastReadAt": 1785597289896,
+      "lastSeenMtime": 1785597289896
+    },
+    "wiki/concepts/harness-engineering/上下文连续性.md": {
+      "lastReadAt": 1788526012497,
+      "lastSeenMtime": 1788526012497
+    },
+    "wiki/concepts/harness-engineering/Harness驾驭层.md": {
+      "lastReadAt": 1785597971110,
+      "lastSeenMtime": 1785597971110
+    },
+    "wiki/concepts/harness-engineering/Harness六大组件.md": {
+      "lastReadAt": 1788403504872,
+      "lastSeenMtime": 1788403504872
+    },
+    "wiki/concepts/hermes-agent/工具架构.md": {
+      "lastReadAt": 1785597622387,
+      "lastSeenMtime": 1785597622387
+    },
+    "wiki/concepts/hermes-agent/记忆系统.md": {
+      "lastReadAt": 1785597622388,
+      "lastSeenMtime": 1785597622388
+    },
+    "wiki/concepts/hermes-agent/技能系统.md": {
+      "lastReadAt": 1785597622388,
+      "lastSeenMtime": 1785597622388
+    },
+    "wiki/concepts/hermes-agent/自我改进循环.md": {
+      "lastReadAt": 1785597622388,
+      "lastSeenMtime": 1785597622388
+    },
+    "wiki/entities/claude-code/query-ts实现.md": {
+      "lastReadAt": 1785597622389,
+      "lastSeenMtime": 1785597622389
+    },
+    "wiki/entities/claude-code/queryengine对话引擎.md": {
+      "lastReadAt": 1785597622389,
+      "lastSeenMtime": 1785597622389
+    },
+    "wiki/entities/claude-code/Skills技能扩展.md": {
+      "lastReadAt": 1785597659776,
+      "lastSeenMtime": 1785597659776
+    },
+    "wiki/entities/claude-code/Sub-Agent机制.md": {
+      "lastReadAt": 1785597659776,
+      "lastSeenMtime": 1785597659776
+    },
+    "wiki/entities/deer-flow/项目概述.md": {
+      "lastReadAt": 1785597759195,
+      "lastSeenMtime": 1785597759195
+    },
+    "wiki/entities/deer-flow/README.md": {
+      "lastReadAt": 1785597759195,
+      "lastSeenMtime": 1785597759195
+    },
+    "wiki/entities/deerflow-book/记忆系统.md": {
+      "lastReadAt": 1785597359371,
+      "lastSeenMtime": 1785597359371
+    },
+    "wiki/entities/deerflow-book/沙箱.md": {
+      "lastReadAt": 1785597359371,
+      "lastSeenMtime": 1785597359371
+    },
+    "wiki/entities/deerflow-book/中间件管道.md": {
+      "lastReadAt": 1785597359370,
+      "lastSeenMtime": 1785597359370
+    },
+    "wiki/entities/deerflow-book/子智能体.md": {
+      "lastReadAt": 1785597359370,
+      "lastSeenMtime": 1785597359370
+    },
+    "wiki/entities/deerflow-book/LangGraph引擎.md": {
+      "lastReadAt": 1785597359370,
+      "lastSeenMtime": 1785597359370
+    },
+    "wiki/entities/deerflow-book/LeadAgent大脑.md": {
+      "lastReadAt": 1785597359370,
+      "lastSeenMtime": 1785597359370
+    },
+    "wiki/entities/deerflow-book/Skills系统.md": {
+      "lastReadAt": 1785597289947,
+      "lastSeenMtime": 1785597289947
+    },
+    "wiki/entities/harness-engineering/冲刺合同.md": {
+      "lastReadAt": 1785597289985,
+      "lastSeenMtime": 1785597289985
+    },
+    "wiki/entities/harness-engineering/功能清单文件.md": {
+      "lastReadAt": 1785597289986,
+      "lastSeenMtime": 1785597289986
+    },
+    "wiki/entities/harness-engineering/进度文件.md": {
+      "lastReadAt": 1785597289986,
+      "lastSeenMtime": 1785597289986
+    },
+    "wiki/entities/harness-engineering/AGENTS.md文件.md": {
+      "lastReadAt": 1785597759196,
+      "lastSeenMtime": 1785597759196
+    },
+    "wiki/entities/hermes-agent/会话存储.md": {
+      "lastReadAt": 1785597622392,
+      "lastSeenMtime": 1785597622392
+    },
+    "wiki/entities/hermes-agent/网关系统.md": {
+      "lastReadAt": 1785597622393,
+      "lastSeenMtime": 1785597622393
+    },
+    "wiki/entities/hermes-agent/aiagent核心循环.md": {
+      "lastReadAt": 1785597622392,
+      "lastSeenMtime": 1785597622392
+    },
+    "wiki/entities/hermes-agent/hermescli.md": {
+      "lastReadAt": 1785597622392,
+      "lastSeenMtime": 1785597622392
+    },
+    "wiki/index.md": {
+      "lastReadAt": 1788526012499,
+      "lastSeenMtime": 1788526012499
+    },
+    "wiki/index/claude-code/index.md": {
+      "lastReadAt": 1785597496953,
+      "lastSeenMtime": 1785597496953
+    },
+    "wiki/index/deer-flow/index.md": {
+      "lastReadAt": 1785597496953,
+      "lastSeenMtime": 1785597496953
+    },
+    "wiki/index/deerflow-book/index.md": {
+      "lastReadAt": 1785597496953,
+      "lastSeenMtime": 1785597496953
+    },
+    "wiki/index/harness-engineering/index.md": {
+      "lastReadAt": 1788526012498,
+      "lastSeenMtime": 1788526012498
+    },
+    "wiki/index/hermes-agent/index.md": {
+      "lastReadAt": 1785597496953,
+      "lastSeenMtime": 1785597496953
+    },
+    "wiki/index/pi-agent-harness/index.md": {
+      "lastReadAt": 1785597290026,
+      "lastSeenMtime": 1785597290026
+    },
+    "wiki/log.md": {
+      "lastReadAt": 1788526052774,
+      "lastSeenMtime": 1788526052774
+    },
+    "wiki/summaries/源码深度解读.md": {
+      "lastReadAt": 1785597290038,
+      "lastSeenMtime": 1785597290038
+    },
+    "wiki/summaries/运行时独立持久智能体.md": {
+      "lastReadAt": 1788525923841,
+      "lastSeenMtime": 1788525923841
+    },
+    "wiki/summaries/章节与源码路径映射.md": {
+      "lastReadAt": 1785597290048,
+      "lastSeenMtime": 1785597290048
+    },
+    "wiki/summaries/deerflow-book-source.md": {
+      "lastReadAt": 1785597290037,
+      "lastSeenMtime": 1785597290037
+    },
+    "wiki/summaries/Harness_Engineering_完整课程.md": {
+      "lastReadAt": 1785597290037,
+      "lastSeenMtime": 1785597290037
+    },
+    "wiki/summaries/HarnessDev：LLM能否创建并演化自己的Agent Harness.md": {
+      "lastReadAt": 1788403504871,
+      "lastSeenMtime": 1788403504871
+    },
+    "wiki/summaries/hermes-agent文档.md": {
+      "lastReadAt": 1785597290038,
+      "lastSeenMtime": 1785597290038
+    },
+    "wiki/summaries/Pi Agent Harness源码设计精读.md": {
+      "lastReadAt": 1785597971110,
+      "lastSeenMtime": 1785597971110
+    },
+    "wiki/synthesis/架构全景分析.md": {
+      "lastReadAt": 1785597290048,
+      "lastSeenMtime": 1785597290048
+    },
+    "wiki/synthesis/hermes-agent与openclaw对比.md": {
+      "lastReadAt": 1785597290048,
+      "lastSeenMtime": 1785597290048
+    },
+    "raw/sources/文章/结构感知信息检索论文/结构感知信息检索论文解读.md": {
+      "lastReadAt": 1789986858426,
+      "lastSeenMtime": 1788801840521
+    },
+    "raw/sources/文章/结构感知信息检索论文/STAIR——面向技术选型的论文深度解读.md": {
+      "lastReadAt": 1789719367607,
+      "lastSeenMtime": 1789713085902
+    },
+    "raw/sources/文章/字节论文：自进化框架/HarnessDev——面向技术选型的论文深度解读.md": {
+      "lastReadAt": 1789986901118,
+      "lastSeenMtime": 1789716488069
+    },
+    "raw/sources/文章/自演化执行图论文/Self-Evolving Execution Structures for LLM Agents.pdf": {
+      "lastReadAt": 1789718529915,
+      "lastSeenMtime": 1789265048801
+    },
+    "raw/sources/文章/自演化执行图论文/Procedural Graph——面向技术选型的论文深度解读.md": {
+      "lastReadAt": 1789719353905,
+      "lastSeenMtime": 1789718482374
+    },
+    "raw/sources/文章/模块化智能体运行框架自改进论文/ModularRSI——面向技术选型的深度解读.md": {
+      "lastReadAt": 1789986881680,
+      "lastSeenMtime": 1789986668488
+    },
+    "wiki/summaries/自演化执行图（Procedural Graphs）.md": {
+      "lastReadAt": 1789986725121,
+      "lastSeenMtime": 1789265536050
+    },
+    "raw/sources/Deepseek Harness/Deepseek Harness 分组件阐述.md": {
+      "lastReadAt": 1790129094625,
+      "lastSeenMtime": 1790319175077
+    },
+    "ModularRSI模块化智能体运行框架递归自改进深度技术说明.md": {
+      "lastReadAt": 1790095692356,
+      "lastSeenMtime": 1790095779194
+    }
+  },
+  "readLaterPaths": [],
+  "ui": {
+    "resultMode": "table",
+    "visibleColumns": [
+      "name",
+      "folder",
+      "type",
+      "created",
+      "modified",
+      "last-read",
+      "status",
+      "size",
+      "tags",
+      "incoming",
+      "outgoing"
+    ]
+  },
+  "initialized": true
+}
