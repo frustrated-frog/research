@@ -569,7 +569,7 @@
       "lastSeenMtime": 1785335482838
     },
     "raw/sources/OpenAI_Agents_Python_SDK/OpenAI_Agents_Python_SDK_源码深度解析.md": {
-      "lastReadAt": 1785335482838,
+      "lastReadAt": 1790325078245,
       "lastSeenMtime": 1785335482838
     },
     "raw/sources/openclaw经验总结/我与 Codex 的对话问答.md": {
@@ -609,7 +609,7 @@
       "lastSeenMtime": 1785335482864
     },
     "raw/sources/pairec/PAI-Rec深度技术讲解.md": {
-      "lastReadAt": 1786820156277,
+      "lastReadAt": 1790323284838,
       "lastSeenMtime": 1786820156277
     },
     "raw/sources/PI-MONO/PI-Agent-设计说明.md": {
@@ -965,7 +965,7 @@
       "lastSeenMtime": 1789718482374
     },
     "raw/sources/文章/模块化智能体运行框架自改进论文/ModularRSI——面向技术选型的深度解读.md": {
-      "lastReadAt": 1789986881680,
+      "lastReadAt": 1790402187087,
       "lastSeenMtime": 1789986668488
     },
     "wiki/summaries/自演化执行图（Procedural Graphs）.md": {
@@ -973,12 +973,16 @@
       "lastSeenMtime": 1789265536050
     },
     "raw/sources/Deepseek Harness/Deepseek Harness 分组件阐述.md": {
-      "lastReadAt": 1790129094625,
-      "lastSeenMtime": 1790319175077
+      "lastReadAt": 1790323303838,
+      "lastSeenMtime": 1790324022109
     },
     "ModularRSI模块化智能体运行框架递归自改进深度技术说明.md": {
       "lastReadAt": 1790095692356,
       "lastSeenMtime": 1790095779194
+    },
+    "raw/sources/文章/正则化递归式智能体运行框架自改进论文/RRSI——面向技术选型的深度解读.md": {
+      "lastReadAt": 1790401509824,
+      "lastSeenMtime": 1790401826086
     }
   },
   "readLaterPaths": [],

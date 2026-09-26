@@ -35,7 +35,9 @@ flowchart LR
 
 这里还有一个很容易被忽略、但我认为非常专业的设计：**发生过的模型输出和正式进入上下文的模型输出也不是一回事。** 比如模型正在 stream 一个回答，输出到一半 API 失败了。这次生成行为确实发生过，所以从 Observability 的角度不能假装它不存在；但你也不能把这半句话当成一个正常的 assistant message 塞进下一轮上下文。DeepSeek Harness 因此会区分正式的 assistant message 和没有成功提交的 assistant attempt。这个区分本质上仍然延续了前面的原则：执行事实和模型语义状态必须分开。
 
-当你理解这一点以后，再看 Crash Recovery 就非常自然了。假设 Agent 已经写入了 `turn/start`、`step/start`、`assistant/message`、`tool/call`，工具刚开始执行时进程突然崩了。传统 Agent 如果只定期保存 messages，恢复时很可能不知道最后这个 tool call 到底有没有执行，也不知道这一轮是不是已经结束。Event Log 则天然能告诉系统：这个 turn 开始了但没有对应的 `turn/end`，某个 step 开始了却没有结束，一个 tool call 没有对应的完整结果。这些都是可以通过事件结构判断出来的。
+当你理解这一点以后，再看 Crash Recovery 就非常自然了。假设 Agent 已经写入了 `turn/start`、`step/start`、`assistant/message`、`tool/call`，工具刚开始执行时进程突然崩了。
+
+传统 Agent 如果只定期保存 messages，恢复时很可能不知道最后这个 tool call 到底有没有执行，也不知道这一轮是不是已经结束。Event Log 则天然能告诉系统：这个 turn 开始了但没有对应的 `turn/end`，某个 step 开始了却没有结束，一个 tool call 没有对应的完整结果。这些都是可以通过事件结构判断出来的。
 
 恢复逻辑因此不是“猜当前状态”，而是检查事件序列中的未闭合结构，然后补出一个明确的 interrupted 状态。例如某个 tool call 因 crash 没能正常完成，那么恢复机制可以把它记录成失败结果，再补上 `step/end` 和 `turn/end(interrupted)`。最重要的是，**恢复行为本身同样成为新的事件，而不是偷偷修改过去。** 过去发生过 crash 这个事实不会被擦掉。这一点和数据库 crash recovery 的哲学非常像：日志不是为了让历史看起来完美，而是为了让历史真实且可以恢复。
 
@@ -377,3 +379,368 @@ Service 管 Capability，Event Pipeline 管围绕 Capability 的行为策略。
 **Service 像 Spring Bean，负责业务能力；Event Pipeline 像 Filter / Interceptor / AOP，负责在能力调用前后横向介入。**
 
 这样你再回头看 DeepSeek Harness 的设计，就会明显感觉清楚很多：它不是简单地“插件很多”，而是在刻意避免把**能力实现**和**运行策略**揉成一个东西。
+
+## 三. Tool Execution Pipeline
+
+这一部分我觉得非常值得你认真理解，因为很多 Agent 框架所谓“工具调用”，底层实际上只有一句 `tool.execute(args)`；而 DeepSeek Harness 把一次 Tool Call 拆成了一条完整的、可插入策略、可审批、可观测、可变换结果、可审计的执行管线。
+
+它真正解决的是：**模型只是提出“我要调用某个工具”，但从模型产生 tool call 到真实系统执行这个动作，中间应该由 Harness 掌控，而不是让模型直接碰执行器。** 官方 `dsh-tools` 就是整个模型可见工具注册和执行管线的核心。
+
+先从入口讲。DeepSeek Harness 内部注册的并不是直接发给模型的 Function Calling JSON，而是一个更完整的 `ToolDefinition`。里面除了工具名称、描述、参数 schema，还有真正的 `execute()`、输出定义、超时、并发安全属性、结果转换函数以及 UI 展示逻辑。真正调用 LLM 时，`ctx.tools.schemas(scope)` 才从 `ToolDefinition` 中提取出模型允许知道的那一小部分，生成 `ToolSchema[]`。也就是说，模型只能看到“这个工具叫什么、做什么、参数是什么”，看不到 `execute`、timeout、内部输出结构、UI presenter 等宿主信息。这是一个很重要的安全边界：**Tool 的 Runtime Definition 和 Model-visible Schema 是两套数据结构，而不是直接把宿主对象序列化给模型。**
+
+假设模型现在返回一个 Bash Tool Call，DeepSeek Harness 首先不会立刻执行 Bash，而是先把 `tool/call` 写进我们上一部分讲的 Session Event Log，然后进入 `ctx.tools.execute()`。
+
+这里参数 JSON 会被解析成一个 `ToolExecution` 对象，而且这份解析结果由 Pipeline 接管，不是在每一层重新 parse。这个对象会携带工具名、参数、调用 Agent 身份，以及一个 `AbortSignal`。从这里开始，Tool Call 已经从“LLM 输出的一段数据”变成了“宿主系统掌控的一次受管执行”。这也是为什么后面 Permission、Timeout、Sandbox、Telemetry 都可以可靠地围绕同一次调用工作。官方给出的完整顺序大致就是下面这样。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+```mermaid
+flowchart LR
+    A["LLM 产生 Tool Call"] --> B["记录 tool/call"]
+    B --> C["pre-execute<br/>策略判断"]
+    C --> D["Monotonic Guards<br/>最终安全约束"]
+    D --> E["Approval<br/>必要时询问用户"]
+    E --> F["tools/execute<br/>超时/重试/统计"]
+    F --> G["Tool execute()<br/>真正执行"]
+    G --> H["post-execute<br/>检查/修改结果"]
+    H --> I["finalizeContent"]
+    I --> J["tools/result<br/>最终不可变结果"]
+    J --> K["记录 tool/result"]
+    K --> L["重新进入 LLM Context"]
+```
+
+第一道重要关卡是 `tools/pre-execute`。它是一个 waterfall pipeline，也就是多个插件可以按顺序检查同一次调用。比如权限插件看到 `bash("rm ...")` 后，可以返回 allow、deny 或 ask；如果它不想决定，就调用 `next()` 把控制权交给下一个监听器。
+
+这里特别值得注意 `ask`：它并不是 Tool 自己弹 UI，而是转给独立的 `ctx.approval` Capability。Approval Service 会生成一次独立审批请求，并记录 `approval/asked` 和 `approval/decided`；如果根本没有能够回答审批问题的 UI/provider，系统默认 **fail closed**，也就是拒绝，而不是假设允许。这说明模型没有最终执行权，它只能提出动作，真正的权限来自 Harness。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/approval.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/approval.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+但为什么 `pre-execute` 后面还有一层 **monotonic guard**？因为 waterfall 本质上是可组合、可重新排序的扩展机制，因此不适合承载那些“绝对不能被后续插件推翻”的安全不变量。
+
+DeepSeek Harness 于是又提供 `ctx.tools.guard()`：Guard 只能“拒绝或者不表态”，一旦某个 Guard 拒绝，这个拒绝不会再被后面的插件改成允许。所以你可以把两层理解为：`pre-execute` 是灵活的业务策略，比如某类命令需要审批；Guard 是宿主最终安全线，比如这个 Agent 永远不能访问某种能力。这个设计非常细，因为它避免了一个常见安全漏洞：**插件 A 拒绝了危险调用，插件 B 因执行顺序或逻辑错误又重新允许。** ([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+通过权限阶段以后，并不是直接 `execute()`，而是进入 `tools/execute` waterfall。这个位置和前面的 pre-execute 不一样，它是围绕真正执行过程的“around middleware”，最适合放 Timeout、Retry、Metrics。比如一个插件可以在进入真正 Tool Body 前记录时间，调用 `next()` 执行下游，回来以后记录耗时；另一个插件可以给这次调用加 Deadline；再一个插件可以根据特定错误做有限重试。也就是说，这一层控制的是**执行生命周期**，而前面的 pre-execute 控制的是**是否允许执行**。这正是我们上一轮聊 Service/Event Pipeline 时说的横切逻辑，只不过这里已经落到了具体 Tool Call 的执行链上。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/tool-execution-pipeline.md?utm_source=chatgpt.com "deepseek-harness/docs/tool-execution-pipeline.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+只有经过这些层之后，真正注册在 `ToolDefinition.execute()` 里的 Tool Body 才会运行。比如 Bash Tool 自己并不需要实现全部权限体系，它主要负责把参数转换成 Shell Execution Request，然后消费 `ctx.shell` 这个 Service；至于 `ctx.shell` 背后是本地 Provider 还是 Sandbox Provider，是 Capability Seam 决定的。因此这一条调用链其实把我们前面两部分完全串起来了：**Tool Pipeline 决定“这个动作能不能执行、执行过程怎么被管控”，Service Provider 决定“最终由谁执行”。** 这两个职责严格分开，所以更换 Sandbox 不需要重写 Permission，更换 Permission 也不需要修改 Shell Provider。官方 Tool Catalog 中的 Bash Tool 本身就是 `ctx.shell` 的模型侧 consumer。
+
+执行完成后还有 `tools/post-execute`。这层并不是单纯记录日志，它可以检查甚至修改 Tool Result，例如把某些敏感输出屏蔽、替换模型可见内容、阻断结果，或者附加额外上下文。这里又体现出一个很细的设计：**工具真实返回的 value 和最后喂给模型的 content 不一定完全相同。** 比如工具可以保留结构化结果供宿主程序使用，但模型只看到经过 projection 的文本；如果存在保密策略，还可以进一步替换或阻止某部分内容。ToolDefinition 本身还有 `projectContent` 和最终的 `finalizeContent`，因此 DeepSeek Harness 把“工具真实执行结果”“策略处理后的结果”和“最终模型看到的内容”进一步拆开了。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+最后进入 `tools/result` 时，结果已经被规范化并冻结，成为一次调用的 authoritative outcome。`tools/result` 更像一个只观察最终事实的事件点，Telemetry、审计系统可以消费它，但不应该再把已经确定的结果改掉；随后 Harness 记录 `tool/result` Session Event，再由 Session Surface 和 Context 机制把它放入下一次模型上下文。所以你会发现，从模型发起 Tool Call 到模型看到 Tool Result，前后正好形成一个闭环：**LLM 提出动作 → Session 记录意图 → Harness 审核 → Runtime 执行 → Harness 整理结果 → Session 记录事实 → Context 再反馈给 LLM。** ([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/tool-execution-pipeline.md?utm_source=chatgpt.com "deepseek-harness/docs/tool-execution-pipeline.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+还有一个很关键但容易忽略的能力叫 **per-agent Tool Restriction**。全局可能注册了 Bash、文件系统、Web、Git 等十几个 Tool，但某个 Subagent 并不一定应该全部继承。`ctx.tools.restrict()` 可以在 Agent Scope 上做 allow/deny，而且父子 Scope 的 restriction 会继续相交。这意味着“Tool 是否存在”和“这个 Agent 是否能看见它”也是分离的：Tool Registry 可以全局存在，但模型实际拿到的 `schemas(scope)` 已经经过当前 Agent 权限视图过滤。这样 Multi-Agent 系统就不需要为每个 Agent 建一套独立 ToolRegistry，也不会因为工具全局存在就自动暴露给所有模型。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+所以 DeepSeek Harness 的 Tool Pipeline 真正值得学的地方，不是“它有很多 hook”，而是它把一次工具调用拆成了几个性质完全不同的阶段：**模型描述能力、宿主验证请求、策略决定是否允许、Guard 保证不可突破的安全线、around pipeline 管控执行生命周期、Provider 真正完成动作、post pipeline 控制结果暴露，最后 Session 把结果固定成历史事实。** 这样 Tool 就不再是一个简单函数，而成为 Harness 中一个受控的 I/O 边界。
+
+如果你把 DeepSeek Harness 前三部分串起来，其实已经可以看到它的核心骨架了：**Session Event Sourcing 管“事实”，Cordis + Capability Seam 管“能力和实现”，Tool Pipeline 管“动作如何从模型意图安全地落到真实世界”。** 这三块放在一起，才真正构成一个成熟 Agent Runtime。
+
+### 3.1 DeerFlow中也是有很多middleware这种东西，他们两个是一样的吗
+
+很像，但**不能把 DeerFlow 的 Middleware 和 DeepSeek Harness 的 Event Pipeline 直接画等号**。它们背后的思想是一致的：都不希望把 Memory、权限、Summarization、Tracing、Sandbox 这些横切逻辑硬编码进 Agent Loop，而是提供一条可插入的执行链。不过两者所在的层级和承担的职责不一样。简单说，**DeerFlow Middleware 更像“Agent Loop 的中间件”，DeepSeek Harness Event Pipeline 更像“整个 Harness Runtime 里的通用拦截机制”，Tool Pipeline 只是它的一种具体使用场景。** ([GitHub](https://github.com/bytedance/deer-flow/blob/main/frontend/src/content/en/harness/middlewares.mdx?utm_source=chatgpt.com "deer-flow/frontend/src/content/en/harness/middlewares.mdx at main · bytedance/deer-flow · GitHub"))
+
+先看 DeerFlow。它目前建立在 LangChain `AgentMiddleware` 机制上，一个 Middleware 可以实现 `before_agent`、`before_model`、`after_model`、`after_agent` 等 hook。也就是说，它的核心观察对象是 **Agent 的一次运行以及每一轮 Model Call**。比如 `DynamicContextMiddleware` 可以在调用模型之前往上下文里塞当前时间和 Memory，`SummarizationMiddleware` 可以在 Context 太长时压缩历史，`ClarificationMiddleware` 可以在模型返回之后识别“需要继续询问用户”，`SandboxMiddleware` 则负责 Agent 开始运行前获取 Sandbox、结束后释放。因此 DeerFlow Middleware 可以理解成围绕下面这个循环工作的。([GitHub](https://github.com/bytedance/deer-flow/blob/main/backend/docs/rfc-create-deerflow-agent.md?utm_source=chatgpt.com "deer-flow/backend/docs/rfc-create-deerflow-agent.md at main · bytedance/deer-flow · GitHub"))
+
+```mermaid
+flowchart LR
+    A["before_agent"] --> B["before_model"]
+    B --> C["LLM"]
+    C --> D["after_model"]
+    D --> E["Tool Calls / 下一轮"]
+    E --> B
+    D --> F["after_agent"]
+```
+
+所以 DeerFlow Middleware 特别适合解决的是：**Agent 在运行过程中，每一轮模型调用前后需要增加什么行为。** Memory、上下文注入、Summarization、Loop Detection、Clarification 都非常适合放这里。官方也直接把 Middleware 称为 Lead Agent 添加 cross-cutting behavior 的主要扩展点，并明确说它们可以读取和修改 Agent State、修改 System Prompt、拦截 Tool Call、响应模型输出。([GitHub](https://github.com/bytedance/deer-flow/blob/main/frontend/src/content/en/harness/middlewares.mdx?utm_source=chatgpt.com "deer-flow/frontend/src/content/en/harness/middlewares.mdx at main · bytedance/deer-flow · GitHub"))
+
+DeepSeek Harness 就不太一样。它不是以一个 `AgentMiddleware` 接口作为整个系统的中心，而是底层 Cordis 本身就有通用 Event / Waterfall 机制。任何系统模块都可以定义事件管线，Tool System 只是用这套机制定义了 `tools/pre-execute → guards → tools/execute → tools/post-execute → finalizeContent → tools/result`。因此它观察的对象可以非常细：不是“模型这一轮开始了/结束了”，而是**某一个具体 Tool Call 正准备执行、正在执行、执行结束、结果准备交给模型**。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/tool-execution-pipeline.md?utm_source=chatgpt.com "deepseek-harness/docs/tool-execution-pipeline.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+例如模型发出：
+
+```text
+bash("rm xxx")
+```
+
+在 DeepSeek Harness 中，可以在 `tools/pre-execute` 判断是否允许，可以在 monotonic guard 做绝对禁止规则，可以在 `tools/execute` 外面套 Timeout/Telemetry，可以在 `tools/post-execute` 修改返回结果。它的 waterfall 甚至允许某个 listener 不调用 `next()`，直接短路后面的执行。这种机制已经很接近 Koa Middleware、Netty Pipeline 或 Servlet Filter Chain。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+如果拿同一个“权限检查”功能比较，就更容易看懂区别。DeerFlow 可能在 Agent Middleware 中观察模型返回的 Tool Call，然后阻止某个 Tool 执行；DeepSeek Harness 则直接在 Tool Runtime 自己的 `pre-execute/guard` 阶段完成。最终功能很像，但**拦截的位置不一样**：
+
+```mermaid
+flowchart TD
+    subgraph DeerFlow
+        A1["Agent Middleware"]
+        A2["LLM"]
+        A3["Tool Call"]
+        A4["Tool Runtime"]
+        A1 --> A2 --> A3 --> A4
+    end
+
+    subgraph DeepSeekHarness["DeepSeek Harness"]
+        B1["LLM"]
+        B2["Tool Call"]
+        B3["pre-execute / Guard"]
+        B4["execute Pipeline"]
+        B5["Tool Provider"]
+        B1 --> B2 --> B3 --> B4 --> B5
+    end
+```
+
+所以 DeerFlow 更像在 **Agent orchestration 层** 做增强，而 DeepSeek Harness 可以深入到 **Runtime capability 层**。这也解释了为什么 DeerFlow Middleware 里会同时出现 Memory、Title、Summarization、Vision、Clarification 这些“Agent 行为型”功能；DeepSeek Tool Pipeline 里面则更强调 Permission、Guard、Timeout、Result Rewrite 这类“动作执行型”逻辑。DeerFlow 当前官方 Middleware 列表里确实同时包含 Sandbox、Guardrail、Tool Error Handling、Summarization、Todo、Memory、Loop Detection 等多种职责。([GitHub](https://github.com/bytedance/deer-flow/blob/main/backend/docs/rfc-create-deerflow-agent.md?utm_source=chatgpt.com "deer-flow/backend/docs/rfc-create-deerflow-agent.md at main · bytedance/deer-flow · GitHub"))
+
+不过也不能因此认为 DeerFlow 比较“浅”。DeerFlow 其实也在往 Harness 化发展，而且现在 Middleware 已经不是早期那种固定几个 hook 了。它支持自定义 Middleware、替换内置 Middleware、按 `@Next/@Prev` 控制位置，主 Agent 和 Subagent 还有不同的 Middleware Chain；官方文档甚至明确说当前 DeerFlow 的实际实现更像**管道而不是严格的洋葱模型**。([GitHub](https://github.com/bytedance/deer-flow/blob/main/backend/docs/rfc-create-deerflow-agent.md?utm_source=chatgpt.com "deer-flow/backend/docs/rfc-create-deerflow-agent.md at main · bytedance/deer-flow · GitHub"))
+
+真正最大的架构差异在于：**DeerFlow 把 Middleware 当成 Agent 行为扩展的主机制；DeepSeek Harness 则把 Event Pipeline 放在更底层的 Cordis Runtime 中，同时还有 Service、Capability Seam、Fiber、Effect 等另一套机制。**
+
+也就是说，DeepSeek Harness 中并不是“什么都用 Middleware”。如果是“Shell 到底由本地还是 Sandbox 执行”，它用 **Service/Provider**；如果是“执行 Shell 之前谁可以检查”，才用 **Event Pipeline**；如果是“这个插件创建的 Listener 和 Timer 谁负责回收”，用 **Fiber/Effect**；如果是“这个 Tool 当前 Agent 能不能看见”，又由 **Tool Restriction** 管理。DeerFlow 的很多这些关注点，目前更集中在 Middleware Chain 和组件配置这一层。([GitHub](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/tools.md?utm_source=chatgpt.com "deepseek-harness/docs/subsystems/tools.md at master · deepseek-ai/deepseek-harness · GitHub"))
+
+所以你可以这么记：
+
+**DeerFlow Middleware：围绕 Agent Loop 插能力。**
+
+**DeepSeek Event Pipeline：围绕 Runtime 中某个动作插行为。**
+
+两者“中间件思想”是一样的，但 DeepSeek Harness 把这个思想进一步下沉成了底层 Runtime Primitive，并且和 Service、Scope、Fiber、Effect 配合起来使用。因此你前面感觉“怎么 DeerFlow 也有很多 Middleware”，这个感觉完全对——**它们确实属于同一类 Harness Engineering 思想，只是 DeepSeek Harness 把它拆得更细、更底层。** ([GitHub](https://github.com/bytedance/deer-flow/blob/main/frontend/src/content/en/harness/middlewares.mdx?utm_source=chatgpt.com "deer-flow/frontend/src/content/en/harness/middlewares.mdx at main · bytedance/deer-flow · GitHub"))
+
+### 3.2 几个概念理解：Agent orchestration，Runtime Primitive（或者叫运行时），Capability Seam
+
+这三个概念其实正好对应 Agent Harness 的三个不同层级。最简单地先给你一个总框架：**Agent orchestration 解决“任务怎么组织起来做”，Runtime 解决“这些动作在什么机制下真正运行”，Capability Seam 解决“某一种能力如何被稳定地调用和替换实现”。** 它们不是并列的三个名词，而是从上到下逐渐变底层。
+
+```mermaid
+flowchart TD
+    A["Agent Orchestration<br/>任务如何拆、谁来做、先后顺序"]
+    B["Runtime / Runtime Primitives<br/>执行、生命周期、事件、调度、依赖"]
+    C["Capability Seam<br/>能力接口与实现边界"]
+    D["Concrete Provider<br/>Local / Sandbox / Remote / API"]
+
+    A --> B --> C --> D
+```
+
+1. Agent orchestration 到底是什么
+
+Agent orchestration 可以翻译成“Agent 编排”，它关注的不是某个 Tool 怎么执行，而是**整个任务如何被组织起来完成**。比如用户说“分析这个仓库，找出性能问题并给修复方案”，系统要决定先读哪些文件、是否先做架构扫描、要不要启动一个专门分析数据库的 Subagent、多个 Subagent 的结果什么时候汇总、哪一步失败后应该重试、什么时候结束，这些都属于 orchestration。
+
+所以 orchestration 本质上是一种**高层控制逻辑**。它关心的是“谁做什么、按照什么顺序、结果如何继续流转”。比如 Planner-Executor、Supervisor-Worker、Multi-Agent Workflow、Task Graph，都是典型 orchestration 模式。DeerFlow 的很多 Middleware 其实就在这一层附近，因为它们会影响 Agent 每一轮怎么调用模型、什么时候压缩上下文、什么时候调用 Subagent、什么时候终止。
+
+你可以把 orchestration 想成一个项目经理。它不会亲自执行 Shell 命令，也不会自己写文件，它负责安排：
+
+“先让分析 Agent 看代码，再让测试 Agent 跑测试，再让 Reviewer 检查结果。”
+
+这就是 orchestration。
+
+```mermaid
+flowchart LR
+    U["用户任务"]
+    P["Planner / Lead Agent"]
+    A["Code Agent"]
+    B["Test Agent"]
+    C["Review Agent"]
+    F["Final Synthesis"]
+
+    U --> P
+    P --> A
+    P --> B
+    A --> C
+    B --> C
+    C --> F
+```
+
+所以 orchestration 的核心对象通常是：Task、Agent、Step、Workflow、Dependency、State Transition。它考虑的是“任务结构”。
+
+---
+
+2. Runtime 和 Runtime Primitive 是什么
+
+Runtime 是更底层的概念。你可以理解为：**Agent 真正活着、执行、调工具、维护状态的运行环境。**
+
+一个 Agent 的 Prompt、Workflow、Tool Definition 只是“描述”，真正让它跑起来，需要一个 Runtime。Runtime 要负责很多非常底层的事情，例如调用 LLM、管理一次 Turn、执行 Tool Call、维护 Session、处理超时、重试、异常、取消、事件派发、资源清理、并发和生命周期。
+
+如果说 orchestration 是“项目经理”，那么 Runtime 更像“操作系统”。
+
+Orchestration 会说：
+
+“现在调用 Search Agent。”
+
+Runtime 则负责：
+
+“这个 Agent 的 Context 在哪里，它使用哪个模型，Tool 怎么执行，超时怎么办，Session 怎么写日志，进程失败后怎么清理。”
+
+所以：
+
+**Orchestration 决定做什么。Runtime 保证它真的能运行。**
+
+你前面看到 DeepSeek Harness 的 Cordis，其实就是 Runtime 层非常重要的一部分。Cordis 并不关心“这个任务是研究股票还是修 Java Bug”，它关心的是插件怎么加载、Service 怎么解析、事件怎么传播、Fiber 怎么销毁、Effect 怎么清理。它处理的是运行机制，而不是业务任务。
+
+这里再解释一下 Runtime Primitive。Primitive 不是 Runtime 的同义词，而是 Runtime 提供的“基础原语”。就像操作系统提供：
+
+`process / thread / file / socket / signal`
+
+这些都是基础机制。
+
+Agent Runtime 也会有自己的 Primitive，比如：
+
+`Service`：提供能力
+
+`Event`：广播或拦截行为
+
+`Fiber`：插件生命周期实例
+
+`Effect`：资源副作用管理
+
+`Session Event`：记录执行事实
+
+`Tool Pipeline`：管理工具调用过程
+
+这些都是 Runtime Primitive。
+
+也就是说：
+
+**Runtime 是整个运行环境，Runtime Primitive 是这个运行环境提供的最小机制。**
+
+DeepSeek Harness 比较特别的地方就在于，它没有把很多高级行为写死，而是先提供一组 Primitive，然后让上层组合。
+
+比如：
+
+```text
+Service
++ Event Pipeline
++ Fiber
++ Effect
+```
+
+组合起来以后，才能形成：
+
+```text
+可动态替换的 Tool System
+```
+
+再配合：
+
+```text
+Session
++ Agent Loop
++ Tool System
+```
+
+才形成完整 Agent Runtime。
+
+所以它的设计有点像操作系统：底层提供机制，上层决定策略。
+
+---
+
+3. Capability Seam 到底是什么
+
+Capability Seam 是这三个里面最容易抽象化理解错的一个。它真正意思是：**在系统中刻意留下一个稳定的能力边界，让上层只依赖“这个能力是什么”，而不依赖“这个能力具体怎么实现”。**
+
+比如 Agent 需要一个 Shell 能力。
+
+最差的写法是：
+
+```text
+BashTool
+直接调用
+child_process.spawn()
+```
+
+这样 Bash Tool 和本机执行绑定死了。
+
+以后你想换 Docker，就改 BashTool。
+
+想换 E2B Sandbox，又改 BashTool。
+
+想换 SSH，又改 BashTool。
+
+这就是耦合。
+
+Capability Seam 的做法是先定义：
+
+```text
+Shell Capability
+execute(command)
+```
+
+然后不同 Provider 实现它：
+
+```text
+LocalShellProvider
+DockerShellProvider
+RemoteShellProvider
+SandboxShellProvider
+```
+
+Bash Tool 永远只依赖：
+
+```text
+Shell Capability
+```
+
+而不依赖任何具体 Provider。
+
+```mermaid
+flowchart TD
+    T["Bash Tool<br/>Consumer"]
+    S["Shell Capability Seam<br/>execute(command)"]
+    L["Local Provider"]
+    D["Docker Provider"]
+    R["Remote Provider"]
+    X["Sandbox Provider"]
+
+    T --> S
+    S --> L
+    S --> D
+    S --> R
+    S --> X
+```
+
+这里所谓 Seam，本质就是“接缝”。你可以沿着这个接缝，把下层实现换掉，而上层不用改。
+
+这个概念其实和 Java 里的 Interface + Dependency Injection 很像，但 Capability Seam 的范围通常更大。它不仅仅是一个 interface，而是一整套“能力契约 + Provider + Consumer + 生命周期 +作用域”。
+
+比如 `ShellService` 是接口，但只有接口还不够。系统还得知道：
+
+谁提供 Shell？
+
+这个 Provider 在哪个 Agent Scope 有效？
+
+Provider 被卸载怎么办？
+
+两个 Agent 可以使用不同 Shell 吗？
+
+这些都属于完整 Capability Seam 体系。
+
+所以 Capability Seam 真正价值不是“面向接口编程”，而是：
+
+**把系统中可能变化的部分压缩到一个稳定边界上。**
+
+---
+
+这三个概念放到 DeepSeek Harness 里面，其实可以非常清楚地区分。
+
+比如一个 Agent 想执行：
+
+“让一个 Subagent 到 Sandbox 里跑测试。”
+
+Agent orchestration 负责决定：**启动 Subagent，安排它去跑测试。**
+
+Runtime 负责：**创建 Subagent Scope、运行 Agent Loop、记录 Session、处理 Tool Call。**
+
+Capability Seam 负责：**当 Agent 调 Shell 时，它拿到的是 Sandbox Shell，而不是 Local Shell。**
+
+真正 Sandbox Provider 最后才负责：**把命令送进容器执行。**
+
+整个链路就是：
+
+```mermaid
+flowchart TD
+    O["Agent Orchestration<br/>决定启动 Subagent 跑测试"]
+    R["Runtime<br/>创建 Agent、运行 Loop、管理 Session"]
+    T["Tool Pipeline<br/>处理 Bash Tool Call"]
+    S["Shell Capability Seam"]
+    P["Sandbox Shell Provider"]
+    E["容器真正执行命令"]
+
+    O --> R --> T --> S --> P --> E
+```
+
+所以你以后看到 Agent 框架时，可以用这三个问题判断它设计到哪一层：
+
+**它如何组织任务？** ——看 Orchestration。
+
+**它如何让 Agent 真正稳定运行？** ——看 Runtime。
+
+**它如何把能力与具体实现解耦？** ——看 Capability Seam。
+
+这也是为什么我前面说 DeepSeek Harness 比很多普通 Agent Framework 更偏“Runtime”：它不是只解决“Agent 怎么编排”，而是在往**一个真正可以长期运行、替换能力、隔离环境、管理生命周期的 Agent 操作系统**方向做。
