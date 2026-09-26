@@ -953,7 +953,7 @@
       "lastSeenMtime": 1789713085902
     },
     "raw/sources/文章/字节论文：自进化框架/HarnessDev——面向技术选型的论文深度解读.md": {
-      "lastReadAt": 1789986901118,
+      "lastReadAt": 1790403708438,
       "lastSeenMtime": 1789716488069
     },
     "raw/sources/文章/自演化执行图论文/Self-Evolving Execution Structures for LLM Agents.pdf": {
@@ -983,6 +983,10 @@
     "raw/sources/文章/正则化递归式智能体运行框架自改进论文/RRSI——面向技术选型的深度解读.md": {
       "lastReadAt": 1790401509824,
       "lastSeenMtime": 1790401826086
+    },
+    "raw/sources/文章/System-One控制的智能体记忆论文/Jev-Mem——面向技术选型的深度解读.md": {
+      "lastReadAt": 1790406422154,
+      "lastSeenMtime": 1790405734080
     }
   },
   "readLaterPaths": [],
